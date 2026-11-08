@@ -1,0 +1,35 @@
+{
+  "periodo_a": {
+    "inicio": "2026-09-28",
+    "fim": "2026-09-30"
+  },
+  "periodo_b": {
+    "inicio": "2026-10-01",
+    "fim": "2026-10-02"
+  },
+  "ips_passaram_b": 206,
+  "ips_bloqueados_b": 142,
+  "familias": {
+    "ip_individual": {
+      "regras": 4945,
+      "cobertura_incremental": 0,
+      "bloqueio_colateral": 0
+    },
+    "comportamento": {
+      "regras": 169,
+      "cobertura_incremental": 0,
+      "bloqueio_colateral": 0,
+      "threshold": 5
+    },
+    "crowdsec": {
+      "regras": 8328,
+      "cobertura_incremental": 0,
+      "bloqueio_colateral": 0
+    },
+    "abuseipdb": {
+      "regras": 414244,
+      "cobertura_incremental": 0,
+      "bloqueio_colateral": 0
+    }
+  }
+}
