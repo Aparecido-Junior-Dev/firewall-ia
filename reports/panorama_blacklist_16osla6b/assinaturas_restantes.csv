@@ -1,0 +1,54 @@
+sid,assinatura,categoria,alertas
+2016149,ET INFO Session Traversal Utilities for NAT (STUN Binding Request),Misc activity,3664
+2027863,ET INFO Observed DNS Query to .biz TLD,Potentially Bad Traffic,1217
+2403454,ET CINS Active Threat Intelligence Poor Reputation IP group 155,Misc Attack,490
+2035465,ET INFO Observed Discord Domain in DNS Lookup (discord .com),Misc activity,453
+2403453,ET CINS Active Threat Intelligence Poor Reputation IP group 154,Misc Attack,450
+2060503,ET INFO Discord Chat Service Domain in DNS Lookup (discord .com),Misc activity,362
+2403452,ET CINS Active Threat Intelligence Poor Reputation IP group 153,Misc Attack,284
+2013504,ET INFO GNU/Linux APT User-Agent Outbound likely related to package management,Not Suspicious Traffic,275
+2403455,ET CINS Active Threat Intelligence Poor Reputation IP group 156,Misc Attack,114
+2035466,ET INFO Observed Discord Domain in DNS Lookup (discordapp .com),Misc activity,71
+2042930,ET DYN_DNS DYNAMIC_DNS Query to a *.cloudns .net Domain,Potentially Bad Traffic,66
+2028774,ET JA3 Hash - [Abuse.ch] Possible Adware,Unknown Traffic,65
+2033078,ET INFO Session Traversal Utilities for NAT (STUN Binding Request On Non-Standard High Port),Misc activity,36
+2027757,ET DNS Query for .to TLD,Potentially Bad Traffic,33
+2050736,ET INFO Tencent Cloud Storage Domain in DNS Lookup (myqcloud .com),Misc activity,32
+2063061,ET INFO External IP Lookup Domain (db-ip .com) in DNS Lookup,Misc activity,32
+2052580,ET INFO DNS Query to Alibaba Cloud CDN Domain (aliyuncs .com),Misc activity,31
+2016778,ET DNS Query to a *.pw domain - Likely Hostile,Potentially Bad Traffic,27
+2060502,ET INFO Discord Chat Service Domain in DNS Lookup (gateway .discord .gg),Misc activity,26
+2035463,ET INFO Observed Discord Domain (discord .com in TLS SNI),Misc activity,20
+2403456,ET CINS Active Threat Intelligence Poor Reputation IP group 157,Misc Attack,20
+2016150,ET INFO Session Traversal Utilities for NAT (STUN Binding Response),Misc activity,16
+2027758,ET DNS Query for .cc TLD,Potentially Bad Traffic,16
+2063074,ET INFO Observed External IP Lookup Domain (db-ip .com) in TLS SNI,Misc activity,14
+2050737,ET INFO Observed Tencent Cloud Storage Domain (myqcloud .com in TLS SNI),Misc activity,12
+2052581,ET INFO Observed Alibaba Cloud CDN Domain (aliyuncs .com in TLS SNI),Misc activity,8
+2060504,ET INFO Observed Discord Service Domain (gateway .discord .gg) in TLS SNI,Misc activity,8
+2102180,GPL P2P BitTorrent announce request,Potential Corporate Privacy Violation,7
+2000369,ET P2P BitTorrent Announce,Potential Corporate Privacy Violation,5
+2000334,ET P2P BitTorrent peer sync,Potential Corporate Privacy Violation,3
+2028773,ET JA3 Hash - [Abuse.ch] Possible Adware,Unknown Traffic,3
+2100230,GPL CHAT Jabber/Google Talk Outgoing Traffic,Not Suspicious Traffic,3
+2028801,ET JA3 Hash - [Abuse.ch] Possible Adware,Unknown Traffic,2
+2042639,ET DYN_DNS DYNAMIC_DNS Query to a *.kicks-ass .net Domain,Potentially Bad Traffic,2
+2044008,ET EXPLOIT Realtek SDK - Command Execution/Backdoor Access Inbound (CVE-2021-35394),Attempted Administrator Privilege Gain,2
+2100235,GPL CHAT Jabber/Google Talk Logon Success,Potential Corporate Privacy Violation,2
+2403426,ET CINS Active Threat Intelligence Poor Reputation IP group 127,Misc Attack,2
+2403427,ET CINS Active Threat Intelligence Poor Reputation IP group 128,Misc Attack,2
+2403549,ET CINS Active Threat Intelligence Poor Reputation IP group 250,Misc Attack,2
+2403567,ET CINS Active Threat Intelligence Poor Reputation IP group 268,Misc Attack,2
+2010144,ET P2P Vuze BT UDP Connection (5),Potential Corporate Privacy Violation,1
+2035464,ET INFO Observed Discord Domain (discordapp .com in TLS SNI),Misc activity,1
+2400004,ET DROP Spamhaus DROP Listed Traffic Inbound group 5,Misc Attack,1
+2400016,ET DROP Spamhaus DROP Listed Traffic Inbound group 17,Misc Attack,1
+2402000,ET DROP Dshield Block Listed Source group 1,Misc Attack,1
+2403428,ET CINS Active Threat Intelligence Poor Reputation IP group 129,Misc Attack,1
+2403469,ET CINS Active Threat Intelligence Poor Reputation IP group 170,Misc Attack,1
+2403472,ET CINS Active Threat Intelligence Poor Reputation IP group 173,Misc Attack,1
+2403477,ET CINS Active Threat Intelligence Poor Reputation IP group 178,Misc Attack,1
+2403489,ET CINS Active Threat Intelligence Poor Reputation IP group 190,Misc Attack,1
+2403548,ET CINS Active Threat Intelligence Poor Reputation IP group 249,Misc Attack,1
+2403555,ET CINS Active Threat Intelligence Poor Reputation IP group 256,Misc Attack,1
+2403564,ET CINS Active Threat Intelligence Poor Reputation IP group 265,Misc Attack,1

@@ -1,0 +1,4 @@
+SID 2044008; janela inclusiva ±5 s; timestamps em UTC
+Alertas: 8; com candidato: 5; sem candidato: 3; múltiplos: 0
+Pares candidatos: 5; ações PF por par: {'block': 5}
+Candidatos têm a mesma tupla UDP orientada e proximidade temporal; não demonstram identidade de pacote, causalidade ou bloqueio do alerta. Sem candidato não significa tráfego permitido. NAT, relógios, resolução do timestamp e cobertura do logging podem limitar a correlação.

@@ -1,0 +1,360 @@
+sid,assinatura,categoria,alertas
+2402000,ET DROP Dshield Block Listed Source group 1,Misc Attack,11274
+2016149,ET INFO Session Traversal Utilities for NAT (STUN Binding Request),Misc activity,3664
+2403443,ET CINS Active Threat Intelligence Poor Reputation IP group 144,Misc Attack,3392
+2403444,ET CINS Active Threat Intelligence Poor Reputation IP group 145,Misc Attack,3004
+2027863,ET INFO Observed DNS Query to .biz TLD,Potentially Bad Traffic,1217
+2400016,ET DROP Spamhaus DROP Listed Traffic Inbound group 17,Misc Attack,543
+2403431,ET CINS Active Threat Intelligence Poor Reputation IP group 132,Misc Attack,512
+2403454,ET CINS Active Threat Intelligence Poor Reputation IP group 155,Misc Attack,490
+2035465,ET INFO Observed Discord Domain in DNS Lookup (discord .com),Misc activity,453
+2403453,ET CINS Active Threat Intelligence Poor Reputation IP group 154,Misc Attack,450
+2403580,ET CINS Active Threat Intelligence Poor Reputation IP group 281,Misc Attack,410
+2403317,ET CINS Active Threat Intelligence Poor Reputation IP group 18,Misc Attack,394
+2403579,ET CINS Active Threat Intelligence Poor Reputation IP group 280,Misc Attack,393
+2060503,ET INFO Discord Chat Service Domain in DNS Lookup (discord .com),Misc activity,362
+2403578,ET CINS Active Threat Intelligence Poor Reputation IP group 279,Misc Attack,353
+2400007,ET DROP Spamhaus DROP Listed Traffic Inbound group 8,Misc Attack,349
+2403434,ET CINS Active Threat Intelligence Poor Reputation IP group 135,Misc Attack,348
+2403430,ET CINS Active Threat Intelligence Poor Reputation IP group 131,Misc Attack,319
+2403435,ET CINS Active Threat Intelligence Poor Reputation IP group 136,Misc Attack,317
+2403447,ET CINS Active Threat Intelligence Poor Reputation IP group 148,Misc Attack,301
+2403582,ET CINS Active Threat Intelligence Poor Reputation IP group 283,Misc Attack,299
+2403300,ET CINS Active Threat Intelligence Poor Reputation IP group 1,Misc Attack,295
+2403570,ET CINS Active Threat Intelligence Poor Reputation IP group 271,Misc Attack,289
+2403559,ET CINS Active Threat Intelligence Poor Reputation IP group 260,Misc Attack,288
+2403584,ET CINS Active Threat Intelligence Poor Reputation IP group 285,Misc Attack,288
+2403452,ET CINS Active Threat Intelligence Poor Reputation IP group 153,Misc Attack,284
+2013504,ET INFO GNU/Linux APT User-Agent Outbound likely related to package management,Not Suspicious Traffic,275
+2403451,ET CINS Active Threat Intelligence Poor Reputation IP group 152,Misc Attack,272
+2403449,ET CINS Active Threat Intelligence Poor Reputation IP group 150,Misc Attack,271
+2403581,ET CINS Active Threat Intelligence Poor Reputation IP group 282,Misc Attack,266
+2400067,ET DROP Spamhaus DROP Listed Traffic Inbound group 68,Misc Attack,261
+2400036,ET DROP Spamhaus DROP Listed Traffic Inbound group 37,Misc Attack,253
+2400010,ET DROP Spamhaus DROP Listed Traffic Inbound group 11,Misc Attack,247
+2403433,ET CINS Active Threat Intelligence Poor Reputation IP group 134,Misc Attack,231
+2403436,ET CINS Active Threat Intelligence Poor Reputation IP group 137,Misc Attack,231
+2403441,ET CINS Active Threat Intelligence Poor Reputation IP group 142,Misc Attack,230
+2403534,ET CINS Active Threat Intelligence Poor Reputation IP group 235,Misc Attack,227
+2403594,ET CINS Active Threat Intelligence Poor Reputation IP group 295,Misc Attack,205
+2400057,ET DROP Spamhaus DROP Listed Traffic Inbound group 58,Misc Attack,203
+2403497,ET CINS Active Threat Intelligence Poor Reputation IP group 198,Misc Attack,203
+2403446,ET CINS Active Threat Intelligence Poor Reputation IP group 147,Misc Attack,196
+2403571,ET CINS Active Threat Intelligence Poor Reputation IP group 272,Misc Attack,196
+2403558,ET CINS Active Threat Intelligence Poor Reputation IP group 259,Misc Attack,180
+2403592,ET CINS Active Threat Intelligence Poor Reputation IP group 293,Misc Attack,179
+2403588,ET CINS Active Threat Intelligence Poor Reputation IP group 289,Misc Attack,175
+2403440,ET CINS Active Threat Intelligence Poor Reputation IP group 141,Misc Attack,174
+2403496,ET CINS Active Threat Intelligence Poor Reputation IP group 197,Misc Attack,174
+2403561,ET CINS Active Threat Intelligence Poor Reputation IP group 262,Misc Attack,167
+2403498,ET CINS Active Threat Intelligence Poor Reputation IP group 199,Misc Attack,166
+2403495,ET CINS Active Threat Intelligence Poor Reputation IP group 196,Misc Attack,164
+2403460,ET CINS Active Threat Intelligence Poor Reputation IP group 161,Misc Attack,155
+2403352,ET CINS Active Threat Intelligence Poor Reputation IP group 53,Misc Attack,153
+2403349,ET CINS Active Threat Intelligence Poor Reputation IP group 50,Misc Attack,152
+2403527,ET CINS Active Threat Intelligence Poor Reputation IP group 228,Misc Attack,149
+2403502,ET CINS Active Threat Intelligence Poor Reputation IP group 203,Misc Attack,145
+2403526,ET CINS Active Threat Intelligence Poor Reputation IP group 227,Misc Attack,144
+2403450,ET CINS Active Threat Intelligence Poor Reputation IP group 151,Misc Attack,143
+2403345,ET CINS Active Threat Intelligence Poor Reputation IP group 46,Misc Attack,140
+2403523,ET CINS Active Threat Intelligence Poor Reputation IP group 224,Misc Attack,140
+2403344,ET CINS Active Threat Intelligence Poor Reputation IP group 45,Misc Attack,138
+2403458,ET CINS Active Threat Intelligence Poor Reputation IP group 159,Misc Attack,138
+2403525,ET CINS Active Threat Intelligence Poor Reputation IP group 226,Misc Attack,138
+2403520,ET CINS Active Threat Intelligence Poor Reputation IP group 221,Misc Attack,137
+2403351,ET CINS Active Threat Intelligence Poor Reputation IP group 52,Misc Attack,135
+2403499,ET CINS Active Threat Intelligence Poor Reputation IP group 200,Misc Attack,135
+2403348,ET CINS Active Threat Intelligence Poor Reputation IP group 49,Misc Attack,134
+2403350,ET CINS Active Threat Intelligence Poor Reputation IP group 51,Misc Attack,134
+2403421,ET CINS Active Threat Intelligence Poor Reputation IP group 122,Misc Attack,130
+2403500,ET CINS Active Threat Intelligence Poor Reputation IP group 201,Misc Attack,130
+2403572,ET CINS Active Threat Intelligence Poor Reputation IP group 273,Misc Attack,130
+2403524,ET CINS Active Threat Intelligence Poor Reputation IP group 225,Misc Attack,127
+2400006,ET DROP Spamhaus DROP Listed Traffic Inbound group 7,Misc Attack,126
+2403343,ET CINS Active Threat Intelligence Poor Reputation IP group 44,Misc Attack,126
+2403412,ET CINS Active Threat Intelligence Poor Reputation IP group 113,Misc Attack,126
+2403493,ET CINS Active Threat Intelligence Poor Reputation IP group 194,Misc Attack,126
+2403347,ET CINS Active Threat Intelligence Poor Reputation IP group 48,Misc Attack,125
+2403439,ET CINS Active Threat Intelligence Poor Reputation IP group 140,Misc Attack,124
+2403353,ET CINS Active Threat Intelligence Poor Reputation IP group 54,Misc Attack,122
+2403522,ET CINS Active Threat Intelligence Poor Reputation IP group 223,Misc Attack,122
+2403589,ET CINS Active Threat Intelligence Poor Reputation IP group 290,Misc Attack,120
+2403432,ET CINS Active Threat Intelligence Poor Reputation IP group 133,Misc Attack,119
+2403519,ET CINS Active Threat Intelligence Poor Reputation IP group 220,Misc Attack,119
+2403420,ET CINS Active Threat Intelligence Poor Reputation IP group 121,Misc Attack,118
+2403521,ET CINS Active Threat Intelligence Poor Reputation IP group 222,Misc Attack,118
+2403455,ET CINS Active Threat Intelligence Poor Reputation IP group 156,Misc Attack,114
+2403346,ET CINS Active Threat Intelligence Poor Reputation IP group 47,Misc Attack,113
+2403501,ET CINS Active Threat Intelligence Poor Reputation IP group 202,Misc Attack,113
+2403419,ET CINS Active Threat Intelligence Poor Reputation IP group 120,Misc Attack,112
+2403562,ET CINS Active Threat Intelligence Poor Reputation IP group 263,Misc Attack,111
+2403557,ET CINS Active Threat Intelligence Poor Reputation IP group 258,Misc Attack,108
+2403457,ET CINS Active Threat Intelligence Poor Reputation IP group 158,Misc Attack,107
+2403429,ET CINS Active Threat Intelligence Poor Reputation IP group 130,Misc Attack,106
+2403371,ET CINS Active Threat Intelligence Poor Reputation IP group 72,Misc Attack,101
+2403422,ET CINS Active Threat Intelligence Poor Reputation IP group 123,Misc Attack,101
+2403428,ET CINS Active Threat Intelligence Poor Reputation IP group 129,Misc Attack,101
+2403494,ET CINS Active Threat Intelligence Poor Reputation IP group 195,Misc Attack,96
+2400011,ET DROP Spamhaus DROP Listed Traffic Inbound group 12,Misc Attack,95
+2403530,ET CINS Active Threat Intelligence Poor Reputation IP group 231,Misc Attack,93
+2403531,ET CINS Active Threat Intelligence Poor Reputation IP group 232,Misc Attack,91
+2403508,ET CINS Active Threat Intelligence Poor Reputation IP group 209,Misc Attack,90
+2403532,ET CINS Active Threat Intelligence Poor Reputation IP group 233,Misc Attack,89
+2403509,ET CINS Active Threat Intelligence Poor Reputation IP group 210,Misc Attack,86
+2400045,ET DROP Spamhaus DROP Listed Traffic Inbound group 46,Misc Attack,84
+2403510,ET CINS Active Threat Intelligence Poor Reputation IP group 211,Misc Attack,84
+2403511,ET CINS Active Threat Intelligence Poor Reputation IP group 212,Misc Attack,84
+2403424,ET CINS Active Threat Intelligence Poor Reputation IP group 125,Misc Attack,83
+2403507,ET CINS Active Threat Intelligence Poor Reputation IP group 208,Misc Attack,80
+2403541,ET CINS Active Threat Intelligence Poor Reputation IP group 242,Misc Attack,80
+2403475,ET CINS Active Threat Intelligence Poor Reputation IP group 176,Misc Attack,78
+2403445,ET CINS Active Threat Intelligence Poor Reputation IP group 146,Misc Attack,77
+2403355,ET CINS Active Threat Intelligence Poor Reputation IP group 56,Misc Attack,76
+2403303,ET CINS Active Threat Intelligence Poor Reputation IP group 4,Misc Attack,73
+2403354,ET CINS Active Threat Intelligence Poor Reputation IP group 55,Misc Attack,73
+2403425,ET CINS Active Threat Intelligence Poor Reputation IP group 126,Misc Attack,73
+2035466,ET INFO Observed Discord Domain in DNS Lookup (discordapp .com),Misc activity,71
+2403535,ET CINS Active Threat Intelligence Poor Reputation IP group 236,Misc Attack,71
+2400009,ET DROP Spamhaus DROP Listed Traffic Inbound group 10,Misc Attack,70
+2403418,ET CINS Active Threat Intelligence Poor Reputation IP group 119,Misc Attack,70
+2403517,ET CINS Active Threat Intelligence Poor Reputation IP group 218,Misc Attack,70
+2042930,ET DYN_DNS DYNAMIC_DNS Query to a *.cloudns .net Domain,Potentially Bad Traffic,66
+2403437,ET CINS Active Threat Intelligence Poor Reputation IP group 138,Misc Attack,66
+2403505,ET CINS Active Threat Intelligence Poor Reputation IP group 206,Misc Attack,66
+2403512,ET CINS Active Threat Intelligence Poor Reputation IP group 213,Misc Attack,66
+2028774,ET JA3 Hash - [Abuse.ch] Possible Adware,Unknown Traffic,65
+2403595,ET CINS Active Threat Intelligence Poor Reputation IP group 296,Misc Attack,65
+2403545,ET CINS Active Threat Intelligence Poor Reputation IP group 246,Misc Attack,63
+2400026,ET DROP Spamhaus DROP Listed Traffic Inbound group 27,Misc Attack,62
+2403359,ET CINS Active Threat Intelligence Poor Reputation IP group 60,Misc Attack,62
+2403373,ET CINS Active Threat Intelligence Poor Reputation IP group 74,Misc Attack,62
+2403506,ET CINS Active Threat Intelligence Poor Reputation IP group 207,Misc Attack,61
+2403528,ET CINS Active Threat Intelligence Poor Reputation IP group 229,Misc Attack,61
+2403374,ET CINS Active Threat Intelligence Poor Reputation IP group 75,Misc Attack,60
+2403565,ET CINS Active Threat Intelligence Poor Reputation IP group 266,Misc Attack,60
+2403503,ET CINS Active Threat Intelligence Poor Reputation IP group 204,Misc Attack,59
+2403487,ET CINS Active Threat Intelligence Poor Reputation IP group 188,Misc Attack,58
+2403411,ET CINS Active Threat Intelligence Poor Reputation IP group 112,Misc Attack,56
+2403423,ET CINS Active Threat Intelligence Poor Reputation IP group 124,Misc Attack,55
+2403518,ET CINS Active Threat Intelligence Poor Reputation IP group 219,Misc Attack,53
+2403335,ET CINS Active Threat Intelligence Poor Reputation IP group 36,Misc Attack,52
+2403358,ET CINS Active Threat Intelligence Poor Reputation IP group 59,Misc Attack,52
+2403328,ET CINS Active Threat Intelligence Poor Reputation IP group 29,Misc Attack,51
+2403329,ET CINS Active Threat Intelligence Poor Reputation IP group 30,Misc Attack,51
+2403483,ET CINS Active Threat Intelligence Poor Reputation IP group 184,Misc Attack,51
+2403322,ET CINS Active Threat Intelligence Poor Reputation IP group 23,Misc Attack,50
+2403484,ET CINS Active Threat Intelligence Poor Reputation IP group 185,Misc Attack,50
+2403546,ET CINS Active Threat Intelligence Poor Reputation IP group 247,Misc Attack,50
+2400014,ET DROP Spamhaus DROP Listed Traffic Inbound group 15,Misc Attack,49
+2403302,ET CINS Active Threat Intelligence Poor Reputation IP group 3,Misc Attack,49
+2403569,ET CINS Active Threat Intelligence Poor Reputation IP group 270,Misc Attack,49
+2400004,ET DROP Spamhaus DROP Listed Traffic Inbound group 5,Misc Attack,47
+2403325,ET CINS Active Threat Intelligence Poor Reputation IP group 26,Misc Attack,47
+2403326,ET CINS Active Threat Intelligence Poor Reputation IP group 27,Misc Attack,47
+2403362,ET CINS Active Threat Intelligence Poor Reputation IP group 63,Misc Attack,47
+2403544,ET CINS Active Threat Intelligence Poor Reputation IP group 245,Misc Attack,47
+2403336,ET CINS Active Threat Intelligence Poor Reputation IP group 37,Misc Attack,46
+2403456,ET CINS Active Threat Intelligence Poor Reputation IP group 157,Misc Attack,46
+2403372,ET CINS Active Threat Intelligence Poor Reputation IP group 73,Misc Attack,45
+2403459,ET CINS Active Threat Intelligence Poor Reputation IP group 160,Misc Attack,45
+2403323,ET CINS Active Threat Intelligence Poor Reputation IP group 24,Misc Attack,44
+2403327,ET CINS Active Threat Intelligence Poor Reputation IP group 28,Misc Attack,43
+2403334,ET CINS Active Threat Intelligence Poor Reputation IP group 35,Misc Attack,43
+2403529,ET CINS Active Threat Intelligence Poor Reputation IP group 230,Misc Attack,43
+2400023,ET DROP Spamhaus DROP Listed Traffic Inbound group 24,Misc Attack,42
+2403338,ET CINS Active Threat Intelligence Poor Reputation IP group 39,Misc Attack,42
+2403340,ET CINS Active Threat Intelligence Poor Reputation IP group 41,Misc Attack,42
+2403360,ET CINS Active Threat Intelligence Poor Reputation IP group 61,Misc Attack,42
+2403474,ET CINS Active Threat Intelligence Poor Reputation IP group 175,Misc Attack,42
+2403319,ET CINS Active Threat Intelligence Poor Reputation IP group 20,Misc Attack,41
+2403330,ET CINS Active Threat Intelligence Poor Reputation IP group 31,Misc Attack,41
+2403482,ET CINS Active Threat Intelligence Poor Reputation IP group 183,Misc Attack,41
+2403332,ET CINS Active Threat Intelligence Poor Reputation IP group 33,Misc Attack,40
+2403342,ET CINS Active Threat Intelligence Poor Reputation IP group 43,Misc Attack,40
+2403476,ET CINS Active Threat Intelligence Poor Reputation IP group 177,Misc Attack,40
+2403321,ET CINS Active Threat Intelligence Poor Reputation IP group 22,Misc Attack,39
+2403448,ET CINS Active Threat Intelligence Poor Reputation IP group 149,Misc Attack,39
+2403469,ET CINS Active Threat Intelligence Poor Reputation IP group 170,Misc Attack,39
+2403324,ET CINS Active Threat Intelligence Poor Reputation IP group 25,Misc Attack,38
+2403479,ET CINS Active Threat Intelligence Poor Reputation IP group 180,Misc Attack,38
+2403331,ET CINS Active Threat Intelligence Poor Reputation IP group 32,Misc Attack,37
+2403341,ET CINS Active Threat Intelligence Poor Reputation IP group 42,Misc Attack,37
+2403410,ET CINS Active Threat Intelligence Poor Reputation IP group 111,Misc Attack,37
+2403465,ET CINS Active Threat Intelligence Poor Reputation IP group 166,Misc Attack,37
+2033078,ET INFO Session Traversal Utilities for NAT (STUN Binding Request On Non-Standard High Port),Misc activity,36
+2403409,ET CINS Active Threat Intelligence Poor Reputation IP group 110,Misc Attack,36
+2403489,ET CINS Active Threat Intelligence Poor Reputation IP group 190,Misc Attack,36
+2403591,ET CINS Active Threat Intelligence Poor Reputation IP group 292,Misc Attack,36
+2403320,ET CINS Active Threat Intelligence Poor Reputation IP group 21,Misc Attack,35
+2403542,ET CINS Active Threat Intelligence Poor Reputation IP group 243,Misc Attack,35
+2403315,ET CINS Active Threat Intelligence Poor Reputation IP group 16,Misc Attack,34
+2403361,ET CINS Active Threat Intelligence Poor Reputation IP group 62,Misc Attack,34
+2027757,ET DNS Query for .to TLD,Potentially Bad Traffic,33
+2400037,ET DROP Spamhaus DROP Listed Traffic Inbound group 38,Misc Attack,33
+2403426,ET CINS Active Threat Intelligence Poor Reputation IP group 127,Misc Attack,33
+2403543,ET CINS Active Threat Intelligence Poor Reputation IP group 244,Misc Attack,33
+2050736,ET INFO Tencent Cloud Storage Domain in DNS Lookup (myqcloud .com),Misc activity,32
+2063061,ET INFO External IP Lookup Domain (db-ip .com) in DNS Lookup,Misc activity,32
+2403318,ET CINS Active Threat Intelligence Poor Reputation IP group 19,Misc Attack,32
+2403337,ET CINS Active Threat Intelligence Poor Reputation IP group 38,Misc Attack,32
+2052580,ET INFO DNS Query to Alibaba Cloud CDN Domain (aliyuncs .com),Misc activity,31
+2400000,ET DROP Spamhaus DROP Listed Traffic Inbound group 1,Misc Attack,31
+2403333,ET CINS Active Threat Intelligence Poor Reputation IP group 34,Misc Attack,31
+2403590,ET CINS Active Threat Intelligence Poor Reputation IP group 291,Misc Attack,30
+2403313,ET CINS Active Threat Intelligence Poor Reputation IP group 14,Misc Attack,29
+2403339,ET CINS Active Threat Intelligence Poor Reputation IP group 40,Misc Attack,28
+2403364,ET CINS Active Threat Intelligence Poor Reputation IP group 65,Misc Attack,28
+2016778,ET DNS Query to a *.pw domain - Likely Hostile,Potentially Bad Traffic,27
+2403357,ET CINS Active Threat Intelligence Poor Reputation IP group 58,Misc Attack,27
+2403481,ET CINS Active Threat Intelligence Poor Reputation IP group 182,Misc Attack,27
+2060502,ET INFO Discord Chat Service Domain in DNS Lookup (gateway .discord .gg),Misc activity,26
+2403413,ET CINS Active Threat Intelligence Poor Reputation IP group 114,Misc Attack,26
+2403414,ET CINS Active Threat Intelligence Poor Reputation IP group 115,Misc Attack,26
+2403438,ET CINS Active Threat Intelligence Poor Reputation IP group 139,Misc Attack,26
+2403463,ET CINS Active Threat Intelligence Poor Reputation IP group 164,Misc Attack,26
+2403533,ET CINS Active Threat Intelligence Poor Reputation IP group 234,Misc Attack,26
+2403547,ET CINS Active Threat Intelligence Poor Reputation IP group 248,Misc Attack,26
+2403566,ET CINS Active Threat Intelligence Poor Reputation IP group 267,Misc Attack,26
+2403394,ET CINS Active Threat Intelligence Poor Reputation IP group 95,Misc Attack,25
+2403398,ET CINS Active Threat Intelligence Poor Reputation IP group 99,Misc Attack,25
+2403504,ET CINS Active Threat Intelligence Poor Reputation IP group 205,Misc Attack,25
+2403301,ET CINS Active Threat Intelligence Poor Reputation IP group 2,Misc Attack,24
+2403308,ET CINS Active Threat Intelligence Poor Reputation IP group 9,Misc Attack,24
+2403405,ET CINS Active Threat Intelligence Poor Reputation IP group 106,Misc Attack,24
+2400003,ET DROP Spamhaus DROP Listed Traffic Inbound group 4,Misc Attack,23
+2403311,ET CINS Active Threat Intelligence Poor Reputation IP group 12,Misc Attack,23
+2403385,ET CINS Active Threat Intelligence Poor Reputation IP group 86,Misc Attack,23
+2403390,ET CINS Active Threat Intelligence Poor Reputation IP group 91,Misc Attack,23
+2403442,ET CINS Active Threat Intelligence Poor Reputation IP group 143,Misc Attack,23
+2403480,ET CINS Active Threat Intelligence Poor Reputation IP group 181,Misc Attack,23
+2403536,ET CINS Active Threat Intelligence Poor Reputation IP group 237,Misc Attack,23
+2403548,ET CINS Active Threat Intelligence Poor Reputation IP group 249,Misc Attack,23
+2403310,ET CINS Active Threat Intelligence Poor Reputation IP group 11,Misc Attack,22
+2403312,ET CINS Active Threat Intelligence Poor Reputation IP group 13,Misc Attack,22
+2403381,ET CINS Active Threat Intelligence Poor Reputation IP group 82,Misc Attack,22
+2403388,ET CINS Active Threat Intelligence Poor Reputation IP group 89,Misc Attack,22
+2403461,ET CINS Active Threat Intelligence Poor Reputation IP group 162,Misc Attack,22
+2400039,ET DROP Spamhaus DROP Listed Traffic Inbound group 40,Misc Attack,21
+2403383,ET CINS Active Threat Intelligence Poor Reputation IP group 84,Misc Attack,21
+2403386,ET CINS Active Threat Intelligence Poor Reputation IP group 87,Misc Attack,21
+2403387,ET CINS Active Threat Intelligence Poor Reputation IP group 88,Misc Attack,21
+2403395,ET CINS Active Threat Intelligence Poor Reputation IP group 96,Misc Attack,21
+2403464,ET CINS Active Threat Intelligence Poor Reputation IP group 165,Misc Attack,21
+2035463,ET INFO Observed Discord Domain (discord .com in TLS SNI),Misc activity,20
+2403396,ET CINS Active Threat Intelligence Poor Reputation IP group 97,Misc Attack,20
+2403397,ET CINS Active Threat Intelligence Poor Reputation IP group 98,Misc Attack,20
+2403304,ET CINS Active Threat Intelligence Poor Reputation IP group 5,Misc Attack,19
+2403307,ET CINS Active Threat Intelligence Poor Reputation IP group 8,Misc Attack,19
+2403314,ET CINS Active Threat Intelligence Poor Reputation IP group 15,Misc Attack,19
+2403382,ET CINS Active Threat Intelligence Poor Reputation IP group 83,Misc Attack,19
+2403384,ET CINS Active Threat Intelligence Poor Reputation IP group 85,Misc Attack,19
+2403389,ET CINS Active Threat Intelligence Poor Reputation IP group 90,Misc Attack,19
+2403575,ET CINS Active Threat Intelligence Poor Reputation IP group 276,Misc Attack,19
+2400015,ET DROP Spamhaus DROP Listed Traffic Inbound group 16,Misc Attack,18
+2403306,ET CINS Active Threat Intelligence Poor Reputation IP group 7,Misc Attack,18
+2403316,ET CINS Active Threat Intelligence Poor Reputation IP group 17,Misc Attack,18
+2403375,ET CINS Active Threat Intelligence Poor Reputation IP group 76,Misc Attack,18
+2403379,ET CINS Active Threat Intelligence Poor Reputation IP group 80,Misc Attack,18
+2403391,ET CINS Active Threat Intelligence Poor Reputation IP group 92,Misc Attack,18
+2403399,ET CINS Active Threat Intelligence Poor Reputation IP group 100,Misc Attack,18
+2403560,ET CINS Active Threat Intelligence Poor Reputation IP group 261,Misc Attack,18
+2403392,ET CINS Active Threat Intelligence Poor Reputation IP group 93,Misc Attack,17
+2016150,ET INFO Session Traversal Utilities for NAT (STUN Binding Response),Misc activity,16
+2027758,ET DNS Query for .cc TLD,Potentially Bad Traffic,16
+2403305,ET CINS Active Threat Intelligence Poor Reputation IP group 6,Misc Attack,16
+2403366,ET CINS Active Threat Intelligence Poor Reputation IP group 67,Misc Attack,16
+2403380,ET CINS Active Threat Intelligence Poor Reputation IP group 81,Misc Attack,16
+2403406,ET CINS Active Threat Intelligence Poor Reputation IP group 107,Misc Attack,16
+2403407,ET CINS Active Threat Intelligence Poor Reputation IP group 108,Misc Attack,16
+2403408,ET CINS Active Threat Intelligence Poor Reputation IP group 109,Misc Attack,16
+2403417,ET CINS Active Threat Intelligence Poor Reputation IP group 118,Misc Attack,16
+2403368,ET CINS Active Threat Intelligence Poor Reputation IP group 69,Misc Attack,15
+2403376,ET CINS Active Threat Intelligence Poor Reputation IP group 77,Misc Attack,15
+2403400,ET CINS Active Threat Intelligence Poor Reputation IP group 101,Misc Attack,15
+2403402,ET CINS Active Threat Intelligence Poor Reputation IP group 103,Misc Attack,15
+2063074,ET INFO Observed External IP Lookup Domain (db-ip .com) in TLS SNI,Misc activity,14
+2403393,ET CINS Active Threat Intelligence Poor Reputation IP group 94,Misc Attack,14
+2403404,ET CINS Active Threat Intelligence Poor Reputation IP group 105,Misc Attack,14
+2403513,ET CINS Active Threat Intelligence Poor Reputation IP group 214,Misc Attack,14
+2403574,ET CINS Active Threat Intelligence Poor Reputation IP group 275,Misc Attack,14
+2403369,ET CINS Active Threat Intelligence Poor Reputation IP group 70,Misc Attack,13
+2403370,ET CINS Active Threat Intelligence Poor Reputation IP group 71,Misc Attack,13
+2403401,ET CINS Active Threat Intelligence Poor Reputation IP group 102,Misc Attack,13
+2403462,ET CINS Active Threat Intelligence Poor Reputation IP group 163,Misc Attack,13
+2403466,ET CINS Active Threat Intelligence Poor Reputation IP group 167,Misc Attack,13
+2403573,ET CINS Active Threat Intelligence Poor Reputation IP group 274,Misc Attack,13
+2050737,ET INFO Observed Tencent Cloud Storage Domain (myqcloud .com in TLS SNI),Misc activity,12
+2400017,ET DROP Spamhaus DROP Listed Traffic Inbound group 18,Misc Attack,12
+2400044,ET DROP Spamhaus DROP Listed Traffic Inbound group 45,Misc Attack,12
+2403309,ET CINS Active Threat Intelligence Poor Reputation IP group 10,Misc Attack,12
+2403363,ET CINS Active Threat Intelligence Poor Reputation IP group 64,Misc Attack,12
+2403403,ET CINS Active Threat Intelligence Poor Reputation IP group 104,Misc Attack,12
+2403486,ET CINS Active Threat Intelligence Poor Reputation IP group 187,Misc Attack,12
+2403516,ET CINS Active Threat Intelligence Poor Reputation IP group 217,Misc Attack,12
+2403356,ET CINS Active Threat Intelligence Poor Reputation IP group 57,Misc Attack,11
+2403377,ET CINS Active Threat Intelligence Poor Reputation IP group 78,Misc Attack,10
+2403378,ET CINS Active Threat Intelligence Poor Reputation IP group 79,Misc Attack,10
+2403514,ET CINS Active Threat Intelligence Poor Reputation IP group 215,Misc Attack,10
+2403596,ET CINS Active Threat Intelligence Poor Reputation IP group 297,Misc Attack,10
+2400035,ET DROP Spamhaus DROP Listed Traffic Inbound group 36,Misc Attack,9
+2403468,ET CINS Active Threat Intelligence Poor Reputation IP group 169,Misc Attack,9
+2403478,ET CINS Active Threat Intelligence Poor Reputation IP group 179,Misc Attack,9
+2403515,ET CINS Active Threat Intelligence Poor Reputation IP group 216,Misc Attack,9
+2403537,ET CINS Active Threat Intelligence Poor Reputation IP group 238,Misc Attack,9
+2403586,ET CINS Active Threat Intelligence Poor Reputation IP group 287,Misc Attack,9
+2403593,ET CINS Active Threat Intelligence Poor Reputation IP group 294,Misc Attack,9
+2044008,ET EXPLOIT Realtek SDK - Command Execution/Backdoor Access Inbound (CVE-2021-35394),Attempted Administrator Privilege Gain,8
+2052581,ET INFO Observed Alibaba Cloud CDN Domain (aliyuncs .com in TLS SNI),Misc activity,8
+2060504,ET INFO Observed Discord Service Domain (gateway .discord .gg) in TLS SNI,Misc activity,8
+2400066,ET DROP Spamhaus DROP Listed Traffic Inbound group 67,Misc Attack,8
+2403490,ET CINS Active Threat Intelligence Poor Reputation IP group 191,Misc Attack,8
+2403553,ET CINS Active Threat Intelligence Poor Reputation IP group 254,Misc Attack,8
+2403576,ET CINS Active Threat Intelligence Poor Reputation IP group 277,Misc Attack,8
+2500020,ET COMPROMISED Known Compromised or Hostile Host Traffic group 11,Misc Attack,8
+2102180,GPL P2P BitTorrent announce request,Potential Corporate Privacy Violation,7
+2400042,ET DROP Spamhaus DROP Listed Traffic Inbound group 43,Misc Attack,7
+2400043,ET DROP Spamhaus DROP Listed Traffic Inbound group 44,Misc Attack,7
+2403416,ET CINS Active Threat Intelligence Poor Reputation IP group 117,Misc Attack,6
+2403485,ET CINS Active Threat Intelligence Poor Reputation IP group 186,Misc Attack,6
+2403551,ET CINS Active Threat Intelligence Poor Reputation IP group 252,Misc Attack,6
+2500024,ET COMPROMISED Known Compromised or Hostile Host Traffic group 13,Misc Attack,6
+2000369,ET P2P BitTorrent Announce,Potential Corporate Privacy Violation,5
+2400031,ET DROP Spamhaus DROP Listed Traffic Inbound group 32,Misc Attack,5
+2403367,ET CINS Active Threat Intelligence Poor Reputation IP group 68,Misc Attack,5
+2403477,ET CINS Active Threat Intelligence Poor Reputation IP group 178,Misc Attack,5
+2403587,ET CINS Active Threat Intelligence Poor Reputation IP group 288,Misc Attack,5
+2403564,ET CINS Active Threat Intelligence Poor Reputation IP group 265,Misc Attack,4
+2403583,ET CINS Active Threat Intelligence Poor Reputation IP group 284,Misc Attack,4
+2500036,ET COMPROMISED Known Compromised or Hostile Host Traffic group 19,Misc Attack,4
+2500040,ET COMPROMISED Known Compromised or Hostile Host Traffic group 21,Misc Attack,4
+2000334,ET P2P BitTorrent peer sync,Potential Corporate Privacy Violation,3
+2028773,ET JA3 Hash - [Abuse.ch] Possible Adware,Unknown Traffic,3
+2100230,GPL CHAT Jabber/Google Talk Outgoing Traffic,Not Suspicious Traffic,3
+2400022,ET DROP Spamhaus DROP Listed Traffic Inbound group 23,Misc Attack,3
+2403471,ET CINS Active Threat Intelligence Poor Reputation IP group 172,Misc Attack,3
+2403472,ET CINS Active Threat Intelligence Poor Reputation IP group 173,Misc Attack,3
+2403552,ET CINS Active Threat Intelligence Poor Reputation IP group 253,Misc Attack,3
+2403556,ET CINS Active Threat Intelligence Poor Reputation IP group 257,Misc Attack,3
+2403577,ET CINS Active Threat Intelligence Poor Reputation IP group 278,Misc Attack,3
+2403597,ET CINS Active Threat Intelligence Poor Reputation IP group 298,Misc Attack,3
+2028801,ET JA3 Hash - [Abuse.ch] Possible Adware,Unknown Traffic,2
+2042639,ET DYN_DNS DYNAMIC_DNS Query to a *.kicks-ass .net Domain,Potentially Bad Traffic,2
+2100235,GPL CHAT Jabber/Google Talk Logon Success,Potential Corporate Privacy Violation,2
+2400046,ET DROP Spamhaus DROP Listed Traffic Inbound group 47,Misc Attack,2
+2403427,ET CINS Active Threat Intelligence Poor Reputation IP group 128,Misc Attack,2
+2403467,ET CINS Active Threat Intelligence Poor Reputation IP group 168,Misc Attack,2
+2403488,ET CINS Active Threat Intelligence Poor Reputation IP group 189,Misc Attack,2
+2403549,ET CINS Active Threat Intelligence Poor Reputation IP group 250,Misc Attack,2
+2403555,ET CINS Active Threat Intelligence Poor Reputation IP group 256,Misc Attack,2
+2403567,ET CINS Active Threat Intelligence Poor Reputation IP group 268,Misc Attack,2
+2403585,ET CINS Active Threat Intelligence Poor Reputation IP group 286,Misc Attack,2
+2500042,ET COMPROMISED Known Compromised or Hostile Host Traffic group 22,Misc Attack,2
+2010144,ET P2P Vuze BT UDP Connection (5),Potential Corporate Privacy Violation,1
+2035464,ET INFO Observed Discord Domain (discordapp .com in TLS SNI),Misc activity,1
+2038669,ET EXPLOIT Realtek eCos RSDK/MSDK Stack-based Buffer Overflow Attempt Inbound (CVE-2022-27255),Attempted Administrator Privilege Gain,1
+2400008,ET DROP Spamhaus DROP Listed Traffic Inbound group 9,Misc Attack,1
+2400068,ET DROP Spamhaus DROP Listed Traffic Inbound group 69,Misc Attack,1
+2403415,ET CINS Active Threat Intelligence Poor Reputation IP group 116,Misc Attack,1
+2403538,ET CINS Active Threat Intelligence Poor Reputation IP group 239,Misc Attack,1
+2500018,ET COMPROMISED Known Compromised or Hostile Host Traffic group 10,Misc Attack,1
+2500034,ET COMPROMISED Known Compromised or Hostile Host Traffic group 18,Misc Attack,1

@@ -1,0 +1,197 @@
+/home/aparecido/firewall-ia/scripts/dashboard.py:378: SyntaxWarning: invalid escape sequence '\d'
+  const ipMatch = desc.match(/block ([\d.]+)/);
+[13:03:38] Coletando dados iniciais...
+[13:03:38] Dados prontos.
+[13:03:38] Dashboard disponível em http://172.16.0.125:8080
+[13:03:38] Atualização automática a cada 15s
+  Ctrl+C para parar.
+
+ * Serving Flask app 'dashboard'
+ * Debug mode: off
+Address already in use
+Port 8080 is in use by another program. Either identify and stop that program, or start the server with a different port.
+[15:13:56] Coletando dados iniciais...
+[15:13:56] Dados prontos.
+[15:13:56] Dashboard disponível em http://172.16.0.125:8080
+[15:13:56] Atualização automática a cada 15s
+  Ctrl+C para parar.
+
+ * Serving Flask app 'dashboard'
+ * Debug mode: off
+Address already in use
+Port 8080 is in use by another program. Either identify and stop that program, or start the server with a different port.
+[15:14:04] Coletando dados iniciais...
+[15:14:04] Dados prontos.
+[15:14:04] Dashboard disponível em http://172.16.0.125:8080
+[15:14:04] Atualização automática a cada 15s
+  Ctrl+C para parar.
+
+ * Serving Flask app 'dashboard'
+ * Debug mode: off
+Address already in use
+Port 8080 is in use by another program. Either identify and stop that program, or start the server with a different port.
+[15:14:15] Coletando dados iniciais...
+[15:14:15] Dados prontos.
+[15:14:15] Dashboard disponível em http://172.16.0.125:8080
+[15:14:15] Atualização automática a cada 15s
+  Ctrl+C para parar.
+
+ * Serving Flask app 'dashboard'
+ * Debug mode: off
+Address already in use
+Port 8080 is in use by another program. Either identify and stop that program, or start the server with a different port.
+[15:14:26] Coletando dados iniciais...
+[15:14:26] Dados prontos.
+[15:14:26] Dashboard disponível em http://172.16.0.125:8080
+[15:14:26] Atualização automática a cada 15s
+  Ctrl+C para parar.
+
+ * Serving Flask app 'dashboard'
+ * Debug mode: off
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.16.0.125:8080
+[33mPress CTRL+C to quit[0m
+172.16.0.169 - - [18/Oct/2026 12:14:27] "GET /stream HTTP/1.1" 200 -
+[15:14:28] Coletando dados iniciais...
+[15:14:29] Dados prontos.
+[15:14:29] Dashboard disponível em http://172.16.0.125:8080
+[15:14:29] Atualização automática a cada 15s
+  Ctrl+C para parar.
+
+ * Serving Flask app 'dashboard'
+ * Debug mode: off
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.16.0.125:8080
+[33mPress CTRL+C to quit[0m
+172.16.0.169 - - [18/Oct/2026 12:14:31] "GET /stream HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2026 12:14:33] "GET /api/status HTTP/1.1" 200 -
+172.16.0.169 - - [18/Oct/2026 12:38:16] "GET / HTTP/1.1" 200 -
+172.16.0.169 - - [18/Oct/2026 12:38:16] "GET /dados HTTP/1.1" 200 -
+172.16.0.169 - - [18/Oct/2026 12:38:16] "GET /stream HTTP/1.1" 200 -
+172.16.0.169 - - [18/Oct/2026 13:21:36] "GET / HTTP/1.1" 200 -
+172.16.0.169 - - [18/Oct/2026 13:21:36] "GET /dados HTTP/1.1" 200 -
+172.16.0.169 - - [18/Oct/2026 13:21:36] "GET /stream HTTP/1.1" 200 -
+[16:25:49] Coletando dados iniciais...
+[16:25:49] Dados prontos.
+[16:25:49] Dashboard disponível em http://172.16.0.125:8080
+[16:25:49] Atualização automática a cada 15s
+  Ctrl+C para parar.
+
+ * Serving Flask app 'dashboard'
+ * Debug mode: off
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://127.0.0.1:8080
+[33mPress CTRL+C to quit[0m
+172.16.0.169 - - [20/Oct/2026 13:35:49] "GET / HTTP/1.1" 200 -
+172.16.0.169 - - [20/Oct/2026 13:35:49] "GET /dados HTTP/1.1" 200 -
+172.16.0.169 - - [20/Oct/2026 13:35:49] "GET /stream HTTP/1.1" 200 -
+172.16.0.169 - - [20/Oct/2026 13:35:49] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[23:23:06] Coletando dados iniciais...
+[23:23:06] Dados prontos.
+[23:23:06] Dashboard disponível em http://172.16.0.125:8080
+[23:23:06] Atualização automática a cada 15s
+  Ctrl+C para parar.
+
+ * Serving Flask app 'dashboard'
+ * Debug mode: off
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://127.0.0.1:8080
+[33mPress CTRL+C to quit[0m
+127.0.0.1 - - [21/Oct/2026 20:28:35] "GET /api/status HTTP/1.1" 200 -
+[08:19:35] Coletando dados iniciais...
+[08:19:35] Dados prontos.
+[08:19:35] Dashboard disponível em http://172.16.0.125:8080
+[08:19:35] Atualização automática a cada 15s
+  Ctrl+C para parar.
+
+ * Serving Flask app 'dashboard'
+ * Debug mode: off
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://127.0.0.1:8080
+[33mPress CTRL+C to quit[0m
+127.0.0.1 - - [02/Nov/2026 05:50:20] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [02/Nov/2026 06:01:16] "GET /api/status HTTP/1.1" 200 -
+[09:12:03] Coletando dados iniciais...
+[09:18:20] Coletando dados iniciais...
+[09:18:42] Dados prontos.
+[09:18:42] Dashboard disponível em http://172.16.0.125:8080
+[09:18:42] Atualização automática a cada 15s
+  Ctrl+C para parar.
+
+ * Serving Flask app 'dashboard'
+ * Debug mode: off
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.16.0.125:8080
+[33mPress CTRL+C to quit[0m
+127.0.0.1 - - [02/Nov/2026 06:18:45] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [02/Nov/2026 06:18:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [02/Nov/2026 06:18:55] "GET /dados HTTP/1.1" 200 -
+172.16.0.169 - - [02/Nov/2026 06:31:23] "GET / HTTP/1.1" 200 -
+172.16.0.169 - - [02/Nov/2026 06:31:23] "GET /stream HTTP/1.1" 200 -
+172.16.0.169 - - [02/Nov/2026 06:31:23] "GET /dados HTTP/1.1" 200 -
+172.16.0.169 - - [02/Nov/2026 06:31:23] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+172.16.0.169 - - [02/Nov/2026 06:31:27] "GET / HTTP/1.1" 200 -
+172.16.0.169 - - [02/Nov/2026 06:31:27] "GET /stream HTTP/1.1" 200 -
+172.16.0.169 - - [02/Nov/2026 06:31:27] "GET /dados HTTP/1.1" 200 -
+172.16.0.169 - - [02/Nov/2026 06:32:01] "GET / HTTP/1.1" 200 -
+172.16.0.169 - - [02/Nov/2026 06:32:01] "GET /stream HTTP/1.1" 200 -
+172.16.0.169 - - [02/Nov/2026 06:32:01] "GET /dados HTTP/1.1" 200 -
+[10:38:51] Coletando dados iniciais...
+[10:38:52] Dados prontos.
+[10:38:52] Dashboard disponível em http://172.16.0.125:8080
+[10:38:52] Atualização automática a cada 15s
+  Ctrl+C para parar.
+
+ * Serving Flask app 'dashboard'
+ * Debug mode: off
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.16.0.125:8080
+[33mPress CTRL+C to quit[0m
+127.0.0.1 - - [02/Nov/2026 07:38:54] "GET /api/status HTTP/1.1" 200 -
+172.16.0.169 - - [02/Nov/2026 07:51:32] "GET / HTTP/1.1" 200 -
+172.16.0.169 - - [02/Nov/2026 07:51:32] "GET /stream HTTP/1.1" 200 -
+172.16.0.169 - - [02/Nov/2026 07:51:32] "GET /dados HTTP/1.1" 200 -
+127.0.0.1 - - [02/Nov/2026 08:38:03] "GET /api/status HTTP/1.1" 200 -
+[16:27:31] Coletando dados iniciais...
+[16:27:31] Dados prontos.
+[16:27:31] Dashboard disponível em http://172.16.0.125:8080
+[16:27:31] Atualização automática a cada 15s
+  Ctrl+C para parar.
+
+ * Serving Flask app 'dashboard'
+ * Debug mode: off
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://127.0.0.1:8080
+[33mPress CTRL+C to quit[0m
+172.16.0.169 - - [03/Nov/2026 13:32:22] "GET / HTTP/1.1" 200 -
+172.16.0.169 - - [03/Nov/2026 13:32:22] "GET /stream HTTP/1.1" 200 -
+172.16.0.169 - - [03/Nov/2026 13:32:22] "GET /dados HTTP/1.1" 200 -
+[14:25:42] Coletando dados iniciais...
+[14:25:42] Dados prontos.
+[14:25:42] Dashboard disponível em http://172.16.0.125:8080
+[14:25:42] Atualização automática a cada 15s
+  Ctrl+C para parar.
+
+ * Serving Flask app 'dashboard'
+ * Debug mode: off
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://127.0.0.1:8080
+[33mPress CTRL+C to quit[0m

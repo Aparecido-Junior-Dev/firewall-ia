@@ -1,0 +1,22 @@
+# Credenciais e segredos
+config/opnsense_api.conf
+config/*.key
+config/*.pem
+.env
+*.secret
+
+# Ambiente Python
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+
+# Dados brutos (grandes demais e contêm IPs reais)
+data/raw/
+
+# Relatórios gerados (reproduzíveis pelos scripts)
+# reports/ mantido para evidências de execução
+
+# Temporários
+*.tmp
+*.bak

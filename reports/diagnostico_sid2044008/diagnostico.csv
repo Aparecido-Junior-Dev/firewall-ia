@@ -1,0 +1,1 @@
+tipo,alerta_id,eve_timestamp,src_ip,dest_ip,eve_src_port,eve_dest_port,pf_timestamp,delta_s,pf_src_port,pf_dest_port,pf_acao,pf_interface,pf_direcao,pf_regra,pf_tracker,pf_arquivo,pf_linha

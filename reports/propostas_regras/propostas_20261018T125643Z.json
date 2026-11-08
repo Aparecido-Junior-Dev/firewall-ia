@@ -1,0 +1,187 @@
+{
+  "versao_script": "1.0.0",
+  "timestamp": "2026-10-18T12:56:43Z",
+  "modo": "dry-run",
+  "csv_entrada": "/home/aparecido/firewall-ia/reports/correlacao_sid2044008/correlacao_sid2044008.csv",
+  "sid": 2044008,
+  "cve": "CVE-2021-35394",
+  "assinatura": "ET EXPLOIT Realtek SDK Command Execution/Backdoor Access Inbound",
+  "total_linhas_csv": 8,
+  "candidatos": 5,
+  "ips_unicos": 5,
+  "propostas": 5,
+  "duplicatas": 0,
+  "erros": 0,
+  "status_apply": "não executado (dry-run)",
+  "detalhes_propostas": [
+    {
+      "ip_origem": "118.31.169.106",
+      "n_alertas": 1,
+      "alerta_ids": [
+        "7"
+      ],
+      "timestamps": [
+        "2026-09-30T23:58:30.909022-0300"
+      ],
+      "delta_s": [
+        -0.909022
+      ],
+      "payload": {
+        "enabled": "1",
+        "action": "block",
+        "quick": "1",
+        "interface": "wan",
+        "direction": "in",
+        "ipprotocol": "inet",
+        "protocol": "udp",
+        "source_net": "118.31.169.106",
+        "source_not": "0",
+        "destination_net": "any",
+        "destination_not": "0",
+        "destination_port": "9034",
+        "log": "1",
+        "description": "IA-aparecido: block 118.31.169.106 udp/9034 SID=2044008 CVE-2021-35394 alertas=[7] gerado=2026-10-18T12:56Z"
+      },
+      "uuid": null,
+      "status": "dry-run",
+      "aplicada": false
+    },
+    {
+      "ip_origem": "121.171.129.37",
+      "n_alertas": 1,
+      "alerta_ids": [
+        "6"
+      ],
+      "timestamps": [
+        "2026-09-29T20:07:55.061520-0300"
+      ],
+      "delta_s": [
+        -0.06152
+      ],
+      "payload": {
+        "enabled": "1",
+        "action": "block",
+        "quick": "1",
+        "interface": "wan",
+        "direction": "in",
+        "ipprotocol": "inet",
+        "protocol": "udp",
+        "source_net": "121.171.129.37",
+        "source_not": "0",
+        "destination_net": "any",
+        "destination_not": "0",
+        "destination_port": "9034",
+        "log": "1",
+        "description": "IA-aparecido: block 121.171.129.37 udp/9034 SID=2044008 CVE-2021-35394 alertas=[6] gerado=2026-10-18T12:56Z"
+      },
+      "uuid": null,
+      "status": "dry-run",
+      "aplicada": false
+    },
+    {
+      "ip_origem": "165.245.187.19",
+      "n_alertas": 1,
+      "alerta_ids": [
+        "2"
+      ],
+      "timestamps": [
+        "2026-09-29T08:51:18.955499-0300"
+      ],
+      "delta_s": [
+        0.044501
+      ],
+      "payload": {
+        "enabled": "1",
+        "action": "block",
+        "quick": "1",
+        "interface": "wan",
+        "direction": "in",
+        "ipprotocol": "inet",
+        "protocol": "udp",
+        "source_net": "165.245.187.19",
+        "source_not": "0",
+        "destination_net": "any",
+        "destination_not": "0",
+        "destination_port": "9034",
+        "log": "1",
+        "description": "IA-aparecido: block 165.245.187.19 udp/9034 SID=2044008 CVE-2021-35394 alertas=[2] gerado=2026-10-18T12:56Z"
+      },
+      "uuid": null,
+      "status": "dry-run",
+      "aplicada": false
+    },
+    {
+      "ip_origem": "74.81.97.18",
+      "n_alertas": 1,
+      "alerta_ids": [
+        "4"
+      ],
+      "timestamps": [
+        "2026-09-29T13:06:51.825239-0300"
+      ],
+      "delta_s": [
+        0.174761
+      ],
+      "payload": {
+        "enabled": "1",
+        "action": "block",
+        "quick": "1",
+        "interface": "wan",
+        "direction": "in",
+        "ipprotocol": "inet",
+        "protocol": "udp",
+        "source_net": "74.81.97.18",
+        "source_not": "0",
+        "destination_net": "any",
+        "destination_not": "0",
+        "destination_port": "9034",
+        "log": "1",
+        "description": "IA-aparecido: block 74.81.97.18 udp/9034 SID=2044008 CVE-2021-35394 alertas=[4] gerado=2026-10-18T12:56Z"
+      },
+      "uuid": null,
+      "status": "dry-run",
+      "aplicada": false
+    },
+    {
+      "ip_origem": "94.154.43.117",
+      "n_alertas": 1,
+      "alerta_ids": [
+        "8"
+      ],
+      "timestamps": [
+        "2026-10-02T21:53:20.300253-0300"
+      ],
+      "delta_s": [
+        0.699747
+      ],
+      "payload": {
+        "enabled": "1",
+        "action": "block",
+        "quick": "1",
+        "interface": "wan",
+        "direction": "in",
+        "ipprotocol": "inet",
+        "protocol": "udp",
+        "source_net": "94.154.43.117",
+        "source_not": "0",
+        "destination_net": "any",
+        "destination_not": "0",
+        "destination_port": "9034",
+        "log": "1",
+        "description": "IA-aparecido: block 94.154.43.117 udp/9034 SID=2044008 CVE-2021-35394 alertas=[8] gerado=2026-10-18T12:56Z"
+      },
+      "uuid": null,
+      "status": "dry-run",
+      "aplicada": false
+    }
+  ],
+  "detalhes_duplicatas": [],
+  "detalhes_erros": [],
+  "limitacoes": [
+    "Correlação temporal não prova identidade de pacote.",
+    "sem_candidato excluídos: ausência de registro PF não confirma tráfego permitido.",
+    "Regra bloqueia IP de origem inteiro; pode afetar tráfego legítimo futuro do mesmo IP.",
+    "Destino 192.168.15.200 pode não pertencer à LAN atual; NAT e topologia não verificados.",
+    "Ambiente residencial real: rollback manual disponível via --remover-uuid UUID."
+  ]
+}

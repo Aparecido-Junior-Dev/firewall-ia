@@ -1,0 +1,43 @@
+{
+  "observacao": "Candidatos têm a mesma tupla UDP orientada e proximidade temporal; não demonstram identidade de pacote, causalidade ou bloqueio do alerta. Sem candidato não significa tráfego permitido. NAT, relógios, resolução do timestamp e cobertura do logging podem limitar a correlação.",
+  "criterio": "Até três registros mais próximos de mesma tupla nos cinco arquivos; mesmos IPs orientados com portas diferentes em ±5 s.",
+  "alertas_investigados": 3,
+  "resultados": [
+    {
+      "alerta_id": 1,
+      "timestamp": "2026-09-28T22:49:06.102969-0300",
+      "tupla": [
+        "124.235.163.60",
+        "192.168.15.200",
+        52908,
+        9034
+      ],
+      "mesma_tupla_mais_proxima": [],
+      "mesmos_ips_portas_diferentes_5s": []
+    },
+    {
+      "alerta_id": 3,
+      "timestamp": "2026-09-29T09:35:42.560733-0300",
+      "tupla": [
+        "74.117.6.146",
+        "192.168.15.200",
+        46406,
+        9034
+      ],
+      "mesma_tupla_mais_proxima": [],
+      "mesmos_ips_portas_diferentes_5s": []
+    },
+    {
+      "alerta_id": 5,
+      "timestamp": "2026-09-29T15:56:54.860858-0300",
+      "tupla": [
+        "96.228.60.184",
+        "192.168.15.200",
+        55050,
+        9034
+      ],
+      "mesma_tupla_mais_proxima": [],
+      "mesmos_ips_portas_diferentes_5s": []
+    }
+  ]
+}

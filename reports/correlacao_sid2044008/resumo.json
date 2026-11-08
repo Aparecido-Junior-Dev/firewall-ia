@@ -1,0 +1,24 @@
+{
+  "eve_linhas": 48926,
+  "pf_linhas": 473304,
+  "pf_udp": 319642,
+  "sid": 2044008,
+  "janela_segundos": 5,
+  "alertas": 8,
+  "com_candidato": 5,
+  "sem_candidato": 3,
+  "multiplos_candidatos": 0,
+  "pares_candidatos": 5,
+  "acoes_pf_por_par": {
+    "block": 5
+  },
+  "arquivos_entrada": [
+    "/home/aparecido/firewall-ia/data/raw/suricata/eve_20260927_20261004.json",
+    "/home/aparecido/firewall-ia/data/raw/pf/filter_20260928.log",
+    "/home/aparecido/firewall-ia/data/raw/pf/filter_20260929.log",
+    "/home/aparecido/firewall-ia/data/raw/pf/filter_20260930.log",
+    "/home/aparecido/firewall-ia/data/raw/pf/filter_20261001.log",
+    "/home/aparecido/firewall-ia/data/raw/pf/filter_20261002.log"
+  ],
+  "observacao": "Candidatos têm a mesma tupla UDP orientada e proximidade temporal; não demonstram identidade de pacote, causalidade ou bloqueio do alerta. Sem candidato não significa tráfego permitido. NAT, relógios, resolução do timestamp e cobertura do logging podem limitar a correlação."
+}

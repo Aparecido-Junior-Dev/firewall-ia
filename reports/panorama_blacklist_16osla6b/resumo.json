@@ -1,0 +1,16 @@
+{
+  "eventos_eve": 48926,
+  "alertas": 48915,
+  "ips_blacklist_unicos": 131129,
+  "ips_origem_unicos": 6726,
+  "ips_na_blacklist": 6669,
+  "ips_restantes": 57,
+  "alertas_na_blacklist": 41023,
+  "alertas_restantes": 7892,
+  "ips_origem_ipv6": 0,
+  "eve_arquivo": "/home/aparecido/firewall-ia/data/raw/suricata/eve_20260927_20261004.json",
+  "eve_sha256": "914aac7fe36a8b2622951319fc464635900858d1b89ac24ec775d718a71c7dae",
+  "blacklist_arquivo": "/home/aparecido/firewall-ia/data/reference/abuseipdb_Ba77BZWn/abuseipdb-s100-30d.ipv4",
+  "blacklist_sha256": "ce1a57d6e13ced7e08565cc555c2cb03a118762c34b0ac16171116921ede11ac",
+  "observacao": "Filtro por pertinência do IP de origem à cópia da blacklist, sem comprovar malícia ou benignidade. IPv6 não é coberto pela lista IPv4. Assinaturas são alertas, não ataques confirmados. Portas não confirmam o serviço. A lista coletada em outubro não demonstra sua cobertura na data dos eventos."
+}

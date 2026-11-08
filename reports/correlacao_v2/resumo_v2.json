@@ -1,0 +1,84 @@
+{
+  "versao": "2.0.0",
+  "timestamp": "2026-11-02T08:53:45.220720+00:00",
+  "eve_path": "/home/aparecido/firewall-ia/data/raw/suricata/eve_20260927_20261004.json",
+  "pf_paths": [
+    "/home/aparecido/firewall-ia/data/raw/pf/filter_20260928.log",
+    "/home/aparecido/firewall-ia/data/raw/pf/filter_20260929.log",
+    "/home/aparecido/firewall-ia/data/raw/pf/filter_20260930.log",
+    "/home/aparecido/firewall-ia/data/raw/pf/filter_20261001.log",
+    "/home/aparecido/firewall-ia/data/raw/pf/filter_20261002.log"
+  ],
+  "sid_filtro": null,
+  "janela_s_secundaria": 30.0,
+  "communityid_ativo": true,
+  "eve_linhas": 48926,
+  "alertas_total": 48915,
+  "alertas_selecionados": 48915,
+  "pf_linhas": 473304,
+  "pf_eventos_udp_tcp": 386546,
+  "pf_chaves_unicas": 328684,
+  "por_desfecho": {
+    "SEM_REGISTRO": 42639,
+    "AMBOS": 99,
+    "PASSOU": 6012,
+    "BLOQUEADO": 165
+  },
+  "por_trilha": {
+    "comportamento": 42418,
+    "interna": 6495,
+    "reputacao": 2
+  },
+  "por_desfecho_trilha": {
+    "SEM_REGISTRO|comportamento": 42138,
+    "PASSOU|interna": 5994,
+    "SEM_REGISTRO|interna": 501,
+    "BLOQUEADO|comportamento": 165,
+    "AMBOS|comportamento": 99,
+    "PASSOU|comportamento": 16,
+    "PASSOU|reputacao": 2
+  },
+  "top10_passou_sids": {
+    "2016149": {
+      "count": 3664,
+      "sig": "ET INFO Session Traversal Utilities for NAT (STUN Binding Request)"
+    },
+    "2027863": {
+      "count": 1009,
+      "sig": "ET INFO Observed DNS Query to .biz TLD"
+    },
+    "2035465": {
+      "count": 360,
+      "sig": "ET INFO Observed Discord Domain in DNS Lookup (discord .com)"
+    },
+    "2060503": {
+      "count": 286,
+      "sig": "ET INFO Discord Chat Service Domain in DNS Lookup (discord .com)"
+    },
+    "2013504": {
+      "count": 251,
+      "sig": "ET INFO GNU/Linux APT User-Agent Outbound likely related to package management"
+    },
+    "2042930": {
+      "count": 65,
+      "sig": "ET DYN_DNS DYNAMIC_DNS Query to a *.cloudns .net Domain"
+    },
+    "2028774": {
+      "count": 52,
+      "sig": "ET JA3 Hash - [Abuse.ch] Possible Adware"
+    },
+    "2035466": {
+      "count": 51,
+      "sig": "ET INFO Observed Discord Domain in DNS Lookup (discordapp .com)"
+    },
+    "2033078": {
+      "count": 36,
+      "sig": "ET INFO Session Traversal Utilities for NAT (STUN Binding Request On Non-Standard High Port)"
+    },
+    "2050736": {
+      "count": 32,
+      "sig": "ET INFO Tencent Cloud Storage Domain in DNS Lookup (myqcloud .com)"
+    }
+  },
+  "observacao": "Community ID calculado a partir da tupla (proto, src_ip, src_port, dst_ip, dst_port). Junção exata substitui a janela temporal da v1. BLOQUEADO = alerta tem par PF com action=block. PASSOU = alerta tem par PF com action=pass. SEM_REGISTRO = nenhum par PF encontrado (possível lacuna de log, NAT ou cobertura)."
+}

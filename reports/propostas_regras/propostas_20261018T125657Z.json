@@ -1,0 +1,47 @@
+{
+  "versao_script": "1.0.0",
+  "timestamp": "2026-10-18T12:56:57Z",
+  "modo": "aplicar",
+  "csv_entrada": "/home/aparecido/firewall-ia/reports/correlacao_sid2044008/correlacao_sid2044008.csv",
+  "sid": 2044008,
+  "cve": "CVE-2021-35394",
+  "assinatura": "ET EXPLOIT Realtek SDK Command Execution/Backdoor Access Inbound",
+  "total_linhas_csv": 8,
+  "candidatos": 5,
+  "ips_unicos": 5,
+  "propostas": 0,
+  "duplicatas": 5,
+  "erros": 0,
+  "status_apply": "nenhuma regra nova para aplicar",
+  "detalhes_propostas": [],
+  "detalhes_duplicatas": [
+    {
+      "ip": "118.31.169.106",
+      "uuid_existente": "1aaa6b39-b4c9-48c1-b3d8-f694e80383bf"
+    },
+    {
+      "ip": "121.171.129.37",
+      "uuid_existente": "a8b8d12a-fb19-402b-ae39-a6a4d1d6718d"
+    },
+    {
+      "ip": "165.245.187.19",
+      "uuid_existente": "7a989adc-af3c-4834-8b4b-de5a2005bc3e"
+    },
+    {
+      "ip": "74.81.97.18",
+      "uuid_existente": "6bc9389e-2430-4966-b97b-686cce67b2b3"
+    },
+    {
+      "ip": "94.154.43.117",
+      "uuid_existente": "83929162-005b-4716-8686-83a4c0ba96b0"
+    }
+  ],
+  "detalhes_erros": [],
+  "limitacoes": [
+    "Correlação temporal não prova identidade de pacote.",
+    "sem_candidato excluídos: ausência de registro PF não confirma tráfego permitido.",
+    "Regra bloqueia IP de origem inteiro; pode afetar tráfego legítimo futuro do mesmo IP.",
+    "Destino 192.168.15.200 pode não pertencer à LAN atual; NAT e topologia não verificados.",
+    "Ambiente residencial real: rollback manual disponível via --remover-uuid UUID."
+  ]
+}

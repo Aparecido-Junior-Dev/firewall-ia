@@ -1,0 +1,28 @@
+Alertas: 48915
+IPs origem únicos: 6726
+IPs na blacklist: 6669; restantes: 57
+Alertas de IPs na blacklist: 41023; restantes: 7892
+Origens IPv6 (fora da cobertura da lista): 0
+Top 10 assinaturas — todos os alertas:
+  2402000: 11274 — ET DROP Dshield Block Listed Source group 1 — Misc Attack
+  2016149: 3664 — ET INFO Session Traversal Utilities for NAT (STUN Binding Request) — Misc activity
+  2403443: 3392 — ET CINS Active Threat Intelligence Poor Reputation IP group 144 — Misc Attack
+  2403444: 3004 — ET CINS Active Threat Intelligence Poor Reputation IP group 145 — Misc Attack
+  2027863: 1217 — ET INFO Observed DNS Query to .biz TLD — Potentially Bad Traffic
+  2400016: 543 — ET DROP Spamhaus DROP Listed Traffic Inbound group 17 — Misc Attack
+  2403431: 512 — ET CINS Active Threat Intelligence Poor Reputation IP group 132 — Misc Attack
+  2403454: 490 — ET CINS Active Threat Intelligence Poor Reputation IP group 155 — Misc Attack
+  2035465: 453 — ET INFO Observed Discord Domain in DNS Lookup (discord .com) — Misc activity
+  2403453: 450 — ET CINS Active Threat Intelligence Poor Reputation IP group 154 — Misc Attack
+Top 10 assinaturas — após subtração da blacklist:
+  2016149: 3664 — ET INFO Session Traversal Utilities for NAT (STUN Binding Request) — Misc activity
+  2027863: 1217 — ET INFO Observed DNS Query to .biz TLD — Potentially Bad Traffic
+  2403454: 490 — ET CINS Active Threat Intelligence Poor Reputation IP group 155 — Misc Attack
+  2035465: 453 — ET INFO Observed Discord Domain in DNS Lookup (discord .com) — Misc activity
+  2403453: 450 — ET CINS Active Threat Intelligence Poor Reputation IP group 154 — Misc Attack
+  2060503: 362 — ET INFO Discord Chat Service Domain in DNS Lookup (discord .com) — Misc activity
+  2403452: 284 — ET CINS Active Threat Intelligence Poor Reputation IP group 153 — Misc Attack
+  2013504: 275 — ET INFO GNU/Linux APT User-Agent Outbound likely related to package management — Not Suspicious Traffic
+  2403455: 114 — ET CINS Active Threat Intelligence Poor Reputation IP group 156 — Misc Attack
+  2035466: 71 — ET INFO Observed Discord Domain in DNS Lookup (discordapp .com) — Misc activity
+Filtro por pertinência do IP de origem à cópia da blacklist, sem comprovar malícia ou benignidade. IPv6 não é coberto pela lista IPv4. Assinaturas são alertas, não ataques confirmados. Portas não confirmam o serviço. A lista coletada em outubro não demonstra sua cobertura na data dos eventos.
