@@ -1,0 +1,66 @@
+{
+  "periodo_a": {
+    "inicio": "2026-09-28",
+    "fim": "2026-09-30"
+  },
+  "periodo_b": {
+    "inicio": "2026-10-01",
+    "fim": "2026-10-02"
+  },
+  "alertas_a": 55308,
+  "alertas_b": 32304,
+  "fluxos_pf_a": 540966,
+  "fluxos_pf_b": 405642,
+  "ips_passaram_b": 206,
+  "ips_bloqueados_b": 142,
+  "familia_ip": {
+    "regras_candidatas": 4945,
+    "cobertura_incremental": 0,
+    "pct_cobertura": 0.0,
+    "bloqueio_colateral": 0
+  },
+  "familia_comportamento": {
+    "top_portas": [
+      [
+        22,
+        662
+      ],
+      [
+        3389,
+        294
+      ],
+      [
+        8081,
+        280
+      ],
+      [
+        5060,
+        178
+      ],
+      [
+        2323,
+        172
+      ],
+      [
+        3306,
+        166
+      ],
+      [
+        5900,
+        160
+      ],
+      [
+        8443,
+        160
+      ],
+      [
+        3000,
+        148
+      ],
+      [
+        161,
+        138
+      ]
+    ]
+  }
+}
