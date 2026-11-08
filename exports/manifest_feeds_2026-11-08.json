@@ -1,0 +1,47 @@
+[
+  {
+    "feed": "abuseipdb_s100_180d",
+    "url": "https://raw.githubusercontent.com/borestad/blocklist-abuseipdb/refs/heads/main/abuseipdb-s100-180d.ipv4",
+    "arquivo": "data/feeds/2026-11-08/abuseipdb_s100_180d.txt",
+    "sha256": "06a9948e7afc285ddc472aa314733b03b5c649b4975ab2f220a11f62e6da1420",
+    "linhas": 421502,
+    "ips": 421489,
+    "data": "2026-11-08"
+  },
+  {
+    "feed": "spamhaus_drop",
+    "url": "https://www.spamhaus.org/drop/drop.txt",
+    "arquivo": "data/feeds/2026-11-08/spamhaus_drop.txt",
+    "sha256": "73ace132547b0ff7932d593523e89b76c4335430cb3203d0310de369b0fea4e3",
+    "linhas": 1767,
+    "ips": 1767,
+    "data": "2026-11-08"
+  },
+  {
+    "feed": "spamhaus_edrop",
+    "url": "https://www.spamhaus.org/drop/edrop.txt",
+    "arquivo": "data/feeds/2026-11-08/spamhaus_edrop.txt",
+    "sha256": "e23944772d2b9185ae96f064f60b0ea2702021e932575a11e3a6a934c730e266",
+    "linhas": 6,
+    "ips": 6,
+    "data": "2026-11-08"
+  },
+  {
+    "feed": "dshield_block",
+    "url": "https://www.dshield.org/block.txt",
+    "arquivo": "data/feeds/2026-11-08/dshield_block.txt",
+    "sha256": "b8b1d586e063e3d0d30aeae1038f123798e24b45acec5235efd48fc80061622e",
+    "linhas": 48,
+    "ips": 20,
+    "data": "2026-11-08"
+  },
+  {
+    "feed": "et_drop",
+    "url": "https://rules.emergingthreats.net/blockrules/emerging-drop.rules",
+    "arquivo": "data/feeds/2026-11-08/et_drop.txt",
+    "sha256": "4103eb45cd96261c1ee78e7c1cf40735a922919177c4fea3b19f28be999e8d1a",
+    "linhas": 111,
+    "ips": 71,
+    "data": "2026-11-08"
+  }
+]

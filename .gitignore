@@ -20,3 +20,4 @@ data/raw/
 # Temporários
 *.tmp
 *.bak
+data/feeds/
