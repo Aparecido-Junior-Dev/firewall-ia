@@ -1,0 +1,69 @@
+{
+  "versao": "1.0.0",
+  "timestamp": "2026-11-09T11:20:17Z",
+  "arquivos_pf": [
+    "/home/aparecido/firewall-ia/data/raw/pf/filter_20260928.log",
+    "/home/aparecido/firewall-ia/data/raw/pf/filter_20260929.log",
+    "/home/aparecido/firewall-ia/data/raw/pf/filter_20260930.log",
+    "/home/aparecido/firewall-ia/data/raw/pf/filter_20261001.log",
+    "/home/aparecido/firewall-ia/data/raw/pf/filter_20261002.log"
+  ],
+  "totais_pf": {
+    "linhas_total": 473304,
+    "linhas_parseadas": 473087,
+    "eventos_pass": 336192,
+    "eventos_block": 136701
+  },
+  "trafego_benigno": {
+    "total": 336049,
+    "por_criterio": {
+      "origem_interna": 336005,
+      "porta_servico_80": 7,
+      "direcao_out": 37
+    },
+    "criterios_usados": {
+      "origem_interna": "src_ip em 192.168.0.0/16, 172.16.0.0/12, 10.0.0.0/8",
+      "direcao_out": "tráfego saindo da LAN (gerado internamente)",
+      "porta_servico_N": "destino em porta conhecida (80,443,53,22,...)"
+    }
+  },
+  "regras_ia": {
+    "total": 5,
+    "ips_uuids": {
+      "118.31.169.106": "1aaa6b39-b4c9-48c1-b3d8-f694e80383bf",
+      "121.171.129.37": "a8b8d12a-fb19-402b-ae39-a6a4d1d6718d",
+      "165.245.187.19": "7a989adc-af3c-4834-8b4b-de5a2005bc3e",
+      "74.81.97.18": "6bc9389e-2430-4966-b97b-686cce67b2b3",
+      "94.154.43.117": "83929162-005b-4716-8686-83a4c0ba96b0"
+    },
+    "sid_origem": 2044008,
+    "cve": "CVE-2021-35394",
+    "assinatura": "ET EXPLOIT Realtek SDK Command Execution/Backdoor Access Inbound",
+    "porta_alvo": 9034,
+    "protocolo": "udp",
+    "interface": "wan",
+    "direcao": "in"
+  },
+  "falsos_positivos": {
+    "fp_absoluto": 0,
+    "taxa_fp_pct": 0.0,
+    "fp_por_ip": {},
+    "amostra_fluxos": [],
+    "interpretacao": "FP = fluxo benigno que seria bloqueado pelas regras IA. Os 5 IPs são endereços externos de ataque (Realtek exploit); tráfego inbound desses IPs é intrinsecamente suspeito, não constituindo FP real em contexto operacional."
+  },
+  "cobertura_realtek": {
+    "alertas_realtek_sid2044008": 8,
+    "ips_unicos_detectados": 5,
+    "ips_com_regra_ia": 5,
+    "pct_cobertura_ips": 100.0,
+    "fonte": "resumo_v2.json",
+    "nota": "5 de 5 IPs únicos do CVE-2021-35394 têm regra IA-aparecido ativa no OPNsense"
+  },
+  "conclusao": {
+    "taxa_fp_pct": 0.0,
+    "taxa_fp_ok": true,
+    "cobertura_ips_pct": 100.0,
+    "regras_aprovadas": true,
+    "recomendacao": "Taxa de FP: 0.000000%. As 5 regras IA-aparecido não geram impacto mensurável no tráfego benigno. Cobertura de 100% dos IPs Realtek detectados. Manter regras ativas."
+  }
+}
