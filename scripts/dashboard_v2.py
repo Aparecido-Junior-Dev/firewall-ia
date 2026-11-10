@@ -458,194 +458,297 @@ var mapCanvas = document.getElementById('map-canvas');
 var mapTip    = document.getElementById('map-tip');
 var mapWrap   = document.getElementById('map-wrap');
 var ctxMap    = mapCanvas.getContext('2d');
-var W, H, projFn, nodes = [], brasilPt;
-var pktList = [], phases = {};
-var mapReady  = false;
+
+var W, H, projFn;
+var nodes       = [];      // nós calculados
+var brasilPt    = null;
+var pktList     = [];
+var phases      = {};
+var agendados   = {};      // IPs já com setTimeout rodando
+var mapReady    = false;
+var alertasPend = null;    // alertas aguardando mapa terminar de carregar
 
 var BRA = [-51.9, -14.2];
 
 function lcNivel(nivel) {
-  if (nivel === 'high')   return {r:240,g:77, b:77 };
-  if (nivel === 'medium') return {r:245,g:197,b:24 };
-  return                         {r:79, g:145,b:255};
+  if (nivel === 'high')   return {r:240, g:77,  b:77 };
+  if (nivel === 'medium') return {r:245, g:197, b:24 };
+  return                         {r:79,  g:145, b:255};
 }
-function rgba(c,a){ return 'rgba('+c.r+','+c.g+','+c.b+','+a+')'; }
+function rgba(c, a) { return 'rgba('+c.r+','+c.g+','+c.b+','+a+')'; }
 
+// ── Dimensionar e criar projeção ──────────────────────────────────────────
 function setMapSize() {
   W = mapWrap.clientWidth || 900;
   H = Math.round(W * 0.5);
-  mapCanvas.width  = W; mapCanvas.height  = H;
+  mapCanvas.width  = W;  mapCanvas.height  = H;
   mapSvg.setAttribute('width',  W);
   mapSvg.setAttribute('height', H);
-  mapSvg.style.height  = H + 'px';
+  mapSvg.style.height    = H + 'px';
   mapCanvas.style.height = H + 'px';
-  mapWrap.style.height = H + 'px';
-  projFn = d3.geoNaturalEarth1().scale(W/6.4).translate([W/2, H/2]);
+  mapWrap.style.height   = H + 'px';
+  projFn = d3.geoNaturalEarth1().scale(W / 6.4).translate([W / 2, H / 2]);
 }
 
 function screenPt(lon, lat) {
   var p = projFn([lon, lat]);
-  return {x: p[0], y: p[1]};
+  return { x: p[0], y: p[1] };
 }
 
+// ── Construir lista de nós a partir dos alertas ───────────────────────────
 function buildNodes(alertas) {
+  // Manter agendamentos existentes para IPs que voltaram
+  var novosIps = {};
+  alertas.forEach(function(a) { novosIps[a.ip] = true; });
+
   nodes = alertas.map(function(a) {
     var pt = screenPt(a.lon, a.lat);
     if (!phases[a.ip]) phases[a.ip] = Math.random() * Math.PI * 2;
-    return {ip:a.ip, pais:a.pais, flag:a.flag, count:a.count,
-            sig:a.sig, nivel:a.nivel, col:lcNivel(a.nivel), x:pt.x, y:pt.y};
+    return { ip:a.ip, pais:a.pais, flag:a.flag, count:a.count,
+             sig:a.sig, nivel:a.nivel, col:lcNivel(a.nivel), x:pt.x, y:pt.y };
   });
   brasilPt = screenPt(BRA[0], BRA[1]);
+
+  // Agendar apenas IPs novos
+  nodes.forEach(function(n) {
+    if (!agendados[n.ip]) {
+      agendados[n.ip] = true;
+      schedNode(n);
+    }
+  });
 }
 
+// ── Desenhar SVG base (países) ────────────────────────────────────────────
 function drawSVG(world) {
   var countries = topojson.feature(world, world.objects.countries);
-  var borders   = topojson.mesh(world, world.objects.countries, function(a,b){return a!==b;});
+  var borders   = topojson.mesh(world, world.objects.countries,
+                                function(a,b){ return a !== b; });
   var pathGen   = d3.geoPath().projection(projFn);
   var svgSel    = d3.select('#map-svg');
   svgSel.selectAll('*').remove();
 
-  svgSel.append('rect').attr('width',W).attr('height',H).attr('fill','#030b17');
+  // Fundo oceano
+  svgSel.append('rect').attr('width', W).attr('height', H).attr('fill', '#030b17');
 
+  // Grade
   var graticule = d3.geoGraticule()();
-  svgSel.append('path').datum(graticule).attr('d',pathGen)
-    .attr('fill','none').attr('stroke','rgba(79,145,255,0.05)').attr('stroke-width',0.4);
+  svgSel.append('path').datum(graticule).attr('d', pathGen)
+    .attr('fill','none')
+    .attr('stroke','rgba(79,145,255,0.05)')
+    .attr('stroke-width', 0.4);
 
-  svgSel.append('g').selectAll('path').data(countries.features).enter().append('path')
-    .attr('d',pathGen).attr('fill','#132240').attr('stroke','#243d5c').attr('stroke-width',0.5);
+  // Países
+  svgSel.append('g').selectAll('path')
+    .data(countries.features).enter().append('path')
+    .attr('d', pathGen)
+    .attr('fill', '#132240')
+    .attr('stroke', '#243d5c')
+    .attr('stroke-width', 0.5);
 
-  svgSel.append('path').datum(borders).attr('d',pathGen)
-    .attr('fill','none').attr('stroke','#1e3a5a').attr('stroke-width',0.4);
+  // Bordas
+  svgSel.append('path').datum(borders).attr('d', pathGen)
+    .attr('fill','none').attr('stroke','#1e3a5a').attr('stroke-width', 0.4);
 
+  // Equador
   svgSel.append('path')
-    .datum({type:'LineString',coordinates:[[-180,0],[180,0]]})
-    .attr('d',pathGen).attr('fill','none')
-    .attr('stroke','rgba(79,145,255,0.18)').attr('stroke-width',0.8)
+    .datum({type:'LineString', coordinates:[[-180,0],[180,0]]})
+    .attr('d', pathGen).attr('fill','none')
+    .attr('stroke','rgba(79,145,255,0.18)').attr('stroke-width', 0.8)
     .attr('stroke-dasharray','6,8');
 
   mapReady = true;
+
+  // Se havia alertas esperando o mapa, construir agora
+  if (alertasPend) {
+    buildNodes(alertasPend);
+    alertasPend = null;
+  }
 }
 
-// Partículas
-function easeIO(t){return t<0.5?2*t*t:-1+(4-2*t)*t;}
-function bez(t,p0,p1,p2){return (1-t)*(1-t)*p0+2*(1-t)*t*p1+t*t*p2;}
+// ── Partículas ────────────────────────────────────────────────────────────
+function easeIO(t) { return t < 0.5 ? 2*t*t : -1+(4-2*t)*t; }
+function bez(t, p0, p1, p2) { return (1-t)*(1-t)*p0 + 2*(1-t)*t*p1 + t*t*p2; }
 
 function launchPkt(n) {
-  var cx = (n.x+brasilPt.x)/2+(Math.random()-.5)*50;
-  var cy = Math.min(n.y,brasilPt.y)-Math.abs(n.x-brasilPt.x)*0.15-12+(Math.random()-.5)*20;
-  pktList.push({sx:n.x,sy:n.y,dx:brasilPt.x,dy:brasilPt.y,cx:cx,cy:cy,
-    col:n.col,start:performance.now(),dur:1400+Math.random()*900,trail:[]});
+  if (!brasilPt) return;
+  var cx = (n.x + brasilPt.x) / 2 + (Math.random() - 0.5) * 50;
+  var cy = Math.min(n.y, brasilPt.y) - Math.abs(n.x - brasilPt.x) * 0.15
+           - 12 + (Math.random() - 0.5) * 20;
+  pktList.push({
+    sx:n.x, sy:n.y, dx:brasilPt.x, dy:brasilPt.y,
+    cx:cx, cy:cy, col:n.col,
+    start:performance.now(), dur:1400 + Math.random()*900, trail:[]
+  });
 }
 
 function schedNode(n) {
+  // Busca o nó atualizado a cada disparo (pode ter sido recalculado)
   function fire() {
-    launchPkt(n);
-    var d = n.nivel==='high'?220+Math.random()*220:n.nivel==='medium'?440+Math.random()*280:680+Math.random()*400;
-    setTimeout(fire,d);
+    var atual = null;
+    for (var i = 0; i < nodes.length; i++) {
+      if (nodes[i].ip === n.ip) { atual = nodes[i]; break; }
+    }
+    if (!atual) { agendados[n.ip] = false; return; } // IP sumiu
+    launchPkt(atual);
+    var delay = atual.nivel === 'high'   ? 200 + Math.random()*200
+              : atual.nivel === 'medium' ? 400 + Math.random()*300
+              :                            650 + Math.random()*400;
+    setTimeout(fire, delay);
   }
-  setTimeout(fire, Math.random()*1500);
+  setTimeout(fire, Math.random() * 1200);
 }
 
+// ── Render Canvas ─────────────────────────────────────────────────────────
 function drawArcs() {
-  nodes.forEach(function(n){
-    var cx=(n.x+brasilPt.x)/2, cy=Math.min(n.y,brasilPt.y)-Math.abs(n.x-brasilPt.x)*0.14-12;
-    var a=n.nivel==='high'?0.08:n.nivel==='medium'?0.05:0.03;
-    ctxMap.beginPath(); ctxMap.moveTo(n.x,n.y);
-    ctxMap.quadraticCurveTo(cx,cy,brasilPt.x,brasilPt.y);
-    ctxMap.strokeStyle=rgba(n.col,a); ctxMap.lineWidth=n.nivel==='high'?0.9:0.55; ctxMap.stroke();
+  if (!brasilPt) return;
+  nodes.forEach(function(n) {
+    var cx = (n.x + brasilPt.x) / 2;
+    var cy = Math.min(n.y, brasilPt.y) - Math.abs(n.x - brasilPt.x) * 0.14 - 12;
+    var a  = n.nivel==='high' ? 0.08 : n.nivel==='medium' ? 0.05 : 0.03;
+    ctxMap.beginPath();
+    ctxMap.moveTo(n.x, n.y);
+    ctxMap.quadraticCurveTo(cx, cy, brasilPt.x, brasilPt.y);
+    ctxMap.strokeStyle = rgba(n.col, a);
+    ctxMap.lineWidth   = n.nivel==='high' ? 0.9 : 0.55;
+    ctxMap.stroke();
   });
 }
 
 function drawPkts(now) {
-  for(var i=pktList.length-1;i>=0;i--){
-    var p=pktList[i], t=Math.min((now-p.start)/p.dur,1);
-    if(t>=1){pktList.splice(i,1);continue;}
-    var et=easeIO(t), px=bez(et,p.sx,p.cx,p.dx), py=bez(et,p.sy,p.cy,p.dy);
-    p.trail.push({x:px,y:py}); if(p.trail.length>14)p.trail.shift();
-    for(var j=1;j<p.trail.length;j++){
-      var a=(j/p.trail.length)*(1-t)*0.5;
-      ctxMap.beginPath(); ctxMap.moveTo(p.trail[j-1].x,p.trail[j-1].y);
-      ctxMap.lineTo(p.trail[j].x,p.trail[j].y);
-      ctxMap.strokeStyle=rgba(p.col,a); ctxMap.lineWidth=1.5; ctxMap.stroke();
+  for (var i = pktList.length - 1; i >= 0; i--) {
+    var p = pktList[i];
+    var t = Math.min((now - p.start) / p.dur, 1);
+    if (t >= 1) { pktList.splice(i, 1); continue; }
+    var et = easeIO(t);
+    var px = bez(et, p.sx, p.cx, p.dx);
+    var py = bez(et, p.sy, p.cy, p.dy);
+    p.trail.push({x:px, y:py});
+    if (p.trail.length > 14) p.trail.shift();
+    // Rastro
+    for (var j = 1; j < p.trail.length; j++) {
+      var a = (j / p.trail.length) * (1 - t) * 0.5;
+      ctxMap.beginPath();
+      ctxMap.moveTo(p.trail[j-1].x, p.trail[j-1].y);
+      ctxMap.lineTo(p.trail[j].x,   p.trail[j].y);
+      ctxMap.strokeStyle = rgba(p.col, a);
+      ctxMap.lineWidth   = 1.5;
+      ctxMap.stroke();
     }
-    var fa=t<0.88?1:1-(t-0.88)/0.12;
-    ctxMap.globalAlpha=fa; ctxMap.shadowColor=rgba(p.col,1); ctxMap.shadowBlur=8;
-    ctxMap.beginPath(); ctxMap.arc(px,py,2.5,0,Math.PI*2);
-    ctxMap.fillStyle=rgba(p.col,1); ctxMap.fill();
-    ctxMap.shadowBlur=0; ctxMap.globalAlpha=1;
+    // Ponto
+    var fa = t < 0.88 ? 1 : 1 - (t - 0.88) / 0.12;
+    ctxMap.globalAlpha  = fa;
+    ctxMap.shadowColor  = rgba(p.col, 1);
+    ctxMap.shadowBlur   = 8;
+    ctxMap.beginPath();
+    ctxMap.arc(px, py, 2.5, 0, Math.PI * 2);
+    ctxMap.fillStyle = rgba(p.col, 1);
+    ctxMap.fill();
+    ctxMap.shadowBlur   = 0;
+    ctxMap.globalAlpha  = 1;
   }
 }
 
 function drawNodes(now) {
-  var fs=Math.max(9,W*0.011);
-  nodes.forEach(function(n){
-    var ph=phases[n.ip]||0, p=(Math.sin(now/850+ph)*0.5+0.5);
-    var br=n.nivel==='high'?5.5:n.nivel==='medium'?4:3;
-    ctxMap.beginPath(); ctxMap.arc(n.x,n.y,br+4+p*8,0,Math.PI*2);
-    ctxMap.fillStyle=rgba(n.col,0.04+p*0.08); ctxMap.fill();
-    ctxMap.beginPath(); ctxMap.arc(n.x,n.y,br+2,0,Math.PI*2);
-    ctxMap.fillStyle=rgba(n.col,0.15); ctxMap.fill();
-    ctxMap.shadowColor=rgba(n.col,0.9); ctxMap.shadowBlur=12;
-    ctxMap.beginPath(); ctxMap.arc(n.x,n.y,br,0,Math.PI*2);
-    ctxMap.fillStyle=rgba(n.col,1); ctxMap.fill();
-    ctxMap.shadowBlur=0;
-    if(n.nivel==='high'&&W>500){
-      ctxMap.fillStyle=rgba(n.col,0.9);
-      ctxMap.font='bold '+fs+'px sans-serif'; ctxMap.textAlign='center';
-      ctxMap.fillText(n.pais,n.x,n.y-br-5);
+  if (!brasilPt) return;
+  var fs = Math.max(9, W * 0.011);
+  nodes.forEach(function(n) {
+    var ph = phases[n.ip] || 0;
+    var p  = (Math.sin(now / 850 + ph) * 0.5 + 0.5);
+    var br = n.nivel==='high' ? 5.5 : n.nivel==='medium' ? 4 : 3;
+    // Anel externo
+    ctxMap.beginPath(); ctxMap.arc(n.x, n.y, br+4+p*8, 0, Math.PI*2);
+    ctxMap.fillStyle = rgba(n.col, 0.04 + p*0.08); ctxMap.fill();
+    // Anel médio
+    ctxMap.beginPath(); ctxMap.arc(n.x, n.y, br+2, 0, Math.PI*2);
+    ctxMap.fillStyle = rgba(n.col, 0.15); ctxMap.fill();
+    // Núcleo
+    ctxMap.shadowColor = rgba(n.col, 0.9); ctxMap.shadowBlur = 12;
+    ctxMap.beginPath(); ctxMap.arc(n.x, n.y, br, 0, Math.PI*2);
+    ctxMap.fillStyle = rgba(n.col, 1); ctxMap.fill();
+    ctxMap.shadowBlur = 0;
+    // Label países de alta intensidade
+    if (n.nivel === 'high' && W > 500) {
+      ctxMap.fillStyle = rgba(n.col, 0.9);
+      ctxMap.font      = 'bold ' + fs + 'px sans-serif';
+      ctxMap.textAlign = 'center';
+      ctxMap.fillText(n.pais, n.x, n.y - br - 5);
     }
   });
   // Brasil
-  var gb={r:34,g:214,b:122}, pb=(Math.sin(now/600)*0.5+0.5);
-  ctxMap.beginPath(); ctxMap.arc(brasilPt.x,brasilPt.y,15+pb*12,0,Math.PI*2);
-  ctxMap.fillStyle=rgba(gb,0.05+pb*0.07); ctxMap.fill();
-  ctxMap.shadowColor='rgba(34,214,122,.9)'; ctxMap.shadowBlur=16;
-  ctxMap.beginPath(); ctxMap.arc(brasilPt.x,brasilPt.y,6,0,Math.PI*2);
-  ctxMap.fillStyle='#22d67a'; ctxMap.fill();
-  ctxMap.shadowBlur=0;
-  ctxMap.fillStyle='#22d67a';
-  ctxMap.font='bold '+Math.max(11,W*0.013)+'px sans-serif';
-  ctxMap.textAlign='center';
-  ctxMap.fillText('BRASIL',brasilPt.x,brasilPt.y-18);
+  var gb = {r:34, g:214, b:122};
+  var pb = (Math.sin(now / 600) * 0.5 + 0.5);
+  ctxMap.beginPath(); ctxMap.arc(brasilPt.x, brasilPt.y, 15+pb*12, 0, Math.PI*2);
+  ctxMap.fillStyle = rgba(gb, 0.05+pb*0.07); ctxMap.fill();
+  ctxMap.shadowColor = 'rgba(34,214,122,.9)'; ctxMap.shadowBlur = 16;
+  ctxMap.beginPath(); ctxMap.arc(brasilPt.x, brasilPt.y, 6, 0, Math.PI*2);
+  ctxMap.fillStyle = '#22d67a'; ctxMap.fill();
+  ctxMap.shadowBlur = 0;
+  ctxMap.fillStyle = '#22d67a';
+  ctxMap.font      = 'bold ' + Math.max(11, W*0.013) + 'px sans-serif';
+  ctxMap.textAlign = 'center';
+  ctxMap.fillText('BRASIL', brasilPt.x, brasilPt.y - 18);
 }
 
+// ── Loop principal ────────────────────────────────────────────────────────
 function mapLoop(now) {
-  ctxMap.clearRect(0,0,W,H);
-  if(mapReady){ drawArcs(); drawPkts(now); drawNodes(now); }
+  ctxMap.clearRect(0, 0, W, H);
+  if (mapReady) {
+    drawArcs();
+    drawPkts(now);
+    drawNodes(now);
+  }
   requestAnimationFrame(mapLoop);
 }
 
-// Tooltip
-mapWrap.addEventListener('mousemove',function(e){
-  var rect=mapCanvas.getBoundingClientRect();
-  var mx=(e.clientX-rect.left)*(W/rect.width);
-  var my=(e.clientY-rect.top)*(H/rect.height);
-  var found=null;
-  for(var i=0;i<nodes.length;i++){
-    if(Math.sqrt(Math.pow(mx-nodes[i].x,2)+Math.pow(my-nodes[i].y,2))<18){found=nodes[i];break;}
+// ── Tooltip ───────────────────────────────────────────────────────────────
+mapWrap.addEventListener('mousemove', function(e) {
+  var rect  = mapCanvas.getBoundingClientRect();
+  var scale = W / rect.width;
+  var mx    = (e.clientX - rect.left) * scale;
+  var my    = (e.clientY - rect.top)  * scale;
+  var found = null;
+  for (var i = 0; i < nodes.length; i++) {
+    var dx = mx - nodes[i].x, dy = my - nodes[i].y;
+    if (Math.sqrt(dx*dx + dy*dy) < 18) { found = nodes[i]; break; }
   }
-  if(found){
-    mapTip.innerHTML=found.flag+' <strong>'+found.pais+'</strong> ('+found.ip+')<br>'+
-      found.count.toLocaleString('pt-BR')+' alertas &nbsp;·&nbsp; '+found.sig;
-    mapTip.style.display='block';
-    mapTip.style.left=(e.clientX-mapWrap.getBoundingClientRect().left+14)+'px';
-    mapTip.style.top=(e.clientY-mapWrap.getBoundingClientRect().top-10)+'px';
-  } else { mapTip.style.display='none'; }
+  if (found) {
+    mapTip.innerHTML = found.flag + ' <strong>' + found.pais + '</strong>'
+      + ' (' + found.ip + ')<br>'
+      + found.count.toLocaleString('pt-BR') + ' alertas &nbsp;·&nbsp; ' + found.sig;
+    mapTip.style.display = 'block';
+    var wr = mapWrap.getBoundingClientRect();
+    mapTip.style.left = (e.clientX - wr.left + 14) + 'px';
+    mapTip.style.top  = (e.clientY - wr.top  - 10) + 'px';
+  } else {
+    mapTip.style.display = 'none';
+  }
 });
-mapWrap.addEventListener('mouseleave',function(){mapTip.style.display='none';});
+mapWrap.addEventListener('mouseleave', function() { mapTip.style.display = 'none'; });
 
-// Init mapa
-setSize_and_load();
-function setSize_and_load(){
+// ── Inicialização ─────────────────────────────────────────────────────────
+function initMapa() {
   setMapSize();
   d3.json('https://cdn.jsdelivr.net/npm/world-atlas@2.0.2/countries-110m.json')
-    .then(function(world){ drawSVG(world); })
-    .catch(function(e){ console.error('Mapa não carregou:',e); });
+    .then(function(world) {
+      drawSVG(world);       // seta mapReady=true e constrói nodes se alertasPend != null
+    })
+    .catch(function(e) { console.error('Mapa não carregou:', e); });
 }
-requestAnimationFrame(mapLoop);
 
-var rt; window.addEventListener('resize',function(){
-  clearTimeout(rt); rt=setTimeout(setSize_and_load,250);
+// Iniciar loop e carregar mapa
+requestAnimationFrame(mapLoop);
+initMapa();
+
+// Resize responsivo
+var rt;
+window.addEventListener('resize', function() {
+  clearTimeout(rt);
+  rt = setTimeout(function() {
+    setMapSize();
+    // Redesenhar SVG com nova projeção
+    d3.json('https://cdn.jsdelivr.net/npm/world-atlas@2.0.2/countries-110m.json')
+      .then(function(world) { drawSVG(world); if (nodes.length) buildNodes(nodes); });
+  }, 300);
 });
 
 // ════════════════════════════════════════════════════════════
@@ -673,20 +776,20 @@ function renderDados(d) {
   document.getElementById('pf-linhas').textContent = (rv2.pf_linhas||0).toLocaleString('pt-BR');
   document.getElementById('ips-ext').textContent   = (d.alertas_mapa||[]).length + ' blocos';
 
-  // Mapa
+  // Mapa — atualizar nós se mapa já estiver pronto
   var alertas = d.alertas_mapa || [];
-  if(alertas.length > 0 && brasilPt) {
-    var nodesAntigos = nodes.map(function(n){return n.ip;});
-    buildNodes(alertas);
-    nodes.forEach(function(n){
-      if(nodesAntigos.indexOf(n.ip) < 0) schedNode(n);
-    });
-    // Contadores
+  if (alertas.length > 0) {
+    if (mapReady) {
+      buildNodes(alertas);
+    } else {
+      // Mapa ainda carregando — guardar para quando estiver pronto
+      alertasPend = alertas;
+    }
+    // Contadores e tabela (independente do mapa estar pronto)
     var paises = new Set(alertas.map(function(a){return a.pais;}));
     document.getElementById('mc-ips').textContent    = alertas.length;
     document.getElementById('mc-paises').textContent = paises.size;
     document.getElementById('mc-ts').textContent     = d.timestamp;
-    // Tabela atacantes top 10
     var tbody = document.getElementById('tbody-atacantes');
     tbody.innerHTML = '';
     alertas.slice(0,10).forEach(function(a,i){
@@ -699,6 +802,7 @@ function renderDados(d) {
         +'<td style="color:var(--cinza)">'+esc(a.sig)+'</td>'
         +'</tr>';
     });
+  } // fim if alertas.length > 0
   }
 
   // Regras IA
